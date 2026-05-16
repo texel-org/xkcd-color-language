@@ -51,6 +51,7 @@ const colors = convert(data, {
   // maxUsers: 6,
   maxCount: 10000,
 });
+const maxLenDigits = String(colors.length).length;
 console.log(colors.length);
 for (let i = 0; i < colors.length; i++) {
   const {
@@ -62,7 +63,9 @@ for (let i = 0; i < colors.length; i++) {
     cov, // covariance matrix
     filteredColors, // list of { oklab } colors
   } = colors[i];
-  console.log(`${name} (votes:${votes} userVotes:${userVotes})`);
+  console.log(
+    `${String(i).padStart(maxLenDigits, "0")}: ${name} (votes:${votes} userVotes:${userVotes})`,
+  );
 
   // list of oklabs associated with this label in case its useful
   // console.log(filteredColors[0].oklab);

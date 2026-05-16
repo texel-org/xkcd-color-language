@@ -20,17 +20,21 @@ A number of efforts have been made to clean the XKCD data. Much of this effort h
 
 ## Using the Raw Data
 
-The raw XKCD survey data has over 3M records and hundreds of thousands of unique color names. However, there is a lot of spam, typos, troll responses, and so on. Although this repo distributes a very short list of terms, you can get access to the 'cleaned' data using the steps below, which gives you 90K+ color terms, each with their associated RGB value. This may be useful for data mining. The top-voted 5000 color names should be fairly decent, but after that there will be a long tail of typos, poor responses, and potentially some vulgarities. For data mining, you might want to use a minimum vote, such as ~20, and you may also want to filter outliers
+The raw XKCD survey data has over 3M records and hundreds of thousands of unique color names. However, there is a lot of spam, typos, troll responses, and so on. Although this repo distributes a very short list of terms, you can get access to the 'cleaned' data using the steps below, which gives you 90K+ color terms, each with their associated RGB value. This may be useful for data mining, and also accessing the raw RGB values associated with each term. The majority of answers sit in the top couple hundred labels ("green" has 310K+ votes across 92K+ users), and then it tapes off quickly ("pale violet" has 633 votes across 544 users).
+
+Ranked by the number of unique users per label, the top 5000 color names should be fairly decent, but after that there will be a long tail of typos, poor responses, and potentially some vulgarities.
 
 ### Download Files and Clean
 
-Download the [CSV files](https://drive.google.com/drive/folders/1eptbvVtgalKMYuSuZNOZBk1XKh0rqljF?usp=sharing) (`answers.csv` and `users.csv`) and save them in the `data/xkcd` folder, then run:
+Download the [CSV files](https://drive.google.com/drive/folders/1eptbvVtgalKMYuSuZNOZBk1XKh0rqljF?usp=sharing) (`answers.csv` and `users.csv`) or generate them from raw SQLite data (see [How the CSV Was Generated](#how-the-csv-was-generated)), and save them into the `data/xkcd` folder, then run:
 
 ```sh
 node src/clean-data.js
 ```
 
-You can include `--skip-color-blind` or `--skip-non-english` options, but note that you may lose some valuable data, as for example many users will put another language even if they answer in English. For the distribution files, I've left these filters disabled. You can include `--debug` to see what top-voted terms were culled.
+You can include `--skip-color-blind` or `--skip-non-english` options to skip color blind and non-English users respectively, but note that you may lose some valuable data, as for example many users will put another language even if they answer in English. These options are disabled by default.
+
+You can include `--debug` to see what top-voted terms were culled during this cleanup phase.
 
 This will render `data/xkcd/answers.compact.json` which is an array of 3 or 4 element arrays:
 
@@ -78,16 +82,14 @@ You should now have `users.csv` and `answers.csv`.
 
 ## Interesting Colors
 
+TODO: expand
+
 - murex
 - hooloovoo
 - blue screen of death
 - od green
 - hr block green
 - ups brown
-
-## Usage
-
-[![NPM](https://nodei.co/npm/xkcd-color-language.png)](https://www.npmjs.com/package/xkcd-color-language)
 
 ## License
 
