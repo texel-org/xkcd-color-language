@@ -1,0 +1,45 @@
+{
+  "name": "xkcd-color-language",
+  "version": "1.0.0",
+  "description": "curated dataset of color terms from XKCD survey",
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Matt DesLauriers",
+    "url": "https://github.com/mattdesl"
+  },
+  "devDependencies": {
+    "@texel/color": "^1.1.11",
+    "canvas-sketch-util": "^1.10.0",
+    "csv-parser": "3.2.0",
+    "dotenv": "17.4.2",
+    "idb-keyval": "6.2.2",
+    "lit-html": "^3.3.2",
+    "ml-matrix": "6.12.2",
+    "vite": "^8.0.7"
+  },
+  "scripts": {
+    "dev": "vite dev www/"
+  },
+  "keywords": [
+    "color",
+    "colour",
+    "language",
+    "terms",
+    "names",
+    "color-names",
+    "colour-names",
+    "linguistic",
+    "rgb",
+    "oklab"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattdesl/xkcd-color-language.git"
+  },
+  "homepage": "https://github.com/mattdesl/xkcd-color-language",
+  "bugs": {
+    "url": "https://github.com/mattdesl/xkcd-color-language/issues"
+  }
+}

@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>xkcd-color-language</title>
+    <style>
+      :root {
+        --bg: #ffffff;
+        --fg: #111111;
+        --fg-muted: #666666;
+        --fg-subtle: #888888;
+        --surface: #f5f5f5;
+        --surface-hover: #ececec;
+        --border: #dddddd;
+        --border-strong: #bbbbbb;
+        --font-sans: system-ui, -apple-system, sans-serif;
+        --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: var(--font-sans);
+      }
+      #loading-view,
+      #detail-view,
+      #user-view {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 1rem 1.25rem 3rem;
+      }
+      #overview-view header {
+        padding: 1rem 1.25rem 0;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .color-filter {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+        color: var(--fg-muted);
+      }
+      .color-filter label {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        cursor: pointer;
+      }
+      .color-filter__input {
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        border: 1px solid var(--border);
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      .color-filter__slider {
+        width: 100px;
+      }
+      .color-filter__input::-webkit-color-swatch-wrapper {
+        padding: 0;
+      }
+      .color-filter__input::-webkit-color-swatch,
+      .color-filter__input::-moz-color-swatch {
+        border: none;
+        border-radius: 2px;
+      }
+      header {
+        padding: 0.5rem 0 1rem;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 1.4rem;
+        font-weight: 500;
+      }
+      header p {
+        margin: 0.35rem 0 0;
+        color: var(--fg-subtle);
+        font-size: 0.85rem;
+      }
+      .back {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+        color: var(--fg-subtle);
+        font-size: 0.85rem;
+        text-decoration: none;
+      }
+      .back:hover {
+        color: var(--fg);
+      }
+      .loading {
+        padding: 2rem 0;
+        color: var(--fg-subtle);
+      }
+      code {
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+      }
+      .chip {
+        display: inline-block;
+        width: 0.8em;
+        height: 0.8em;
+        vertical-align: -1px;
+        border-radius: 2px;
+        margin: 0 0.15em;
+      }
+
+      .grid {
+        display: grid;
+        gap: 0;
+      }
+      .grid--terms {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      }
+      .grid--votes {
+        grid-template-columns: repeat(auto-fill, minmax(28px, 1fr));
+      }
+      .grid--samples {
+        grid-template-columns: repeat(8, 1fr);
+      }
+      .grid--stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .grid--stats code {
+        font-size: 0.7rem;
+        opacity: 0.85;
+      }
+
+      .detail {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 360px);
+        gap: 1.5rem;
+        align-items: start;
+      }
+      @media (max-width: 800px) {
+        .detail {
+          grid-template-columns: 1fr;
+        }
+        .detail__sim {
+          order: -1;
+        }
+      }
+
+      .sim {
+        position: sticky;
+        top: 0.75rem;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 0.75rem;
+      }
+      .sim__head {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        margin-bottom: 0.75rem;
+      }
+      .sim__mode,
+      .btn,
+      .load-more {
+        background: var(--surface);
+        color: var(--fg);
+        border: 1px solid var(--border);
+        border-radius: 3px;
+        padding: 0.35rem 0.6rem;
+        font: inherit;
+        font-size: 0.8rem;
+        cursor: pointer;
+      }
+      .sim__mode:hover,
+      .btn:hover,
+      .load-more:hover {
+        background: var(--surface-hover);
+        border-color: var(--border-strong);
+      }
+      .sim__body {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .sim__note {
+        margin: 0;
+        color: var(--fg-muted);
+        font-size: 0.75rem;
+        line-height: 1.4;
+      }
+      .sim__slider {
+        display: flex;
+        gap: 0.6rem;
+        align-items: center;
+        font-size: 0.8rem;
+        color: var(--fg-muted);
+      }
+      .sim__slider input {
+        flex: 1;
+      }
+      .sim__slider-value {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--fg);
+        min-width: 3.5em;
+        text-align: right;
+      }
+      .sim__canvas {
+        display: block;
+        width: 100%;
+        height: auto;
+        clip-path: circle(50%);
+        background: var(--bg);
+      }
+
+      .swatch {
+        display: block;
+        aspect-ratio: 1 / 1;
+        position: relative;
+        text-decoration: none;
+        color: inherit;
+        isolation: isolate;
+      }
+      .swatch::before {
+        content: "";
+        position: absolute;
+        inset: -0.5px;
+        background-color: inherit;
+        z-index: -1;
+      }
+      .swatch--labeled {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 6px;
+      }
+      .swatch--labeled .label {
+        font-size: 0.78rem;
+        line-height: 1.2;
+        word-break: break-word;
+      }
+
+      .load-more {
+        display: block;
+        margin: 1rem auto 0;
+        padding: 0.6rem 1.1rem;
+        border-radius: 4px;
+        font-size: 0.85rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div id="loading-view"><p class="loading">loading…</p></div>
+      <div id="overview-view" hidden></div>
+      <div id="detail-view" hidden></div>
+      <div id="user-view" hidden></div>
+    </div>
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>
