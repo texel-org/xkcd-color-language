@@ -13,57 +13,64 @@ import csv from "csv-parser";
 const src = await readFile("data/xkcd/answers.compact.json", "utf8");
 const rows = JSON.parse(src);
 
+let colors = convert(loadDataFromJSON(rows), {
+  minUsers: 4,
+  maxCount: 15000,
+  curated: false,
+  sort: "users",
+});
+// colors.reverse();
+// colors = colors.slice(0, 3000);
+
 // const data = loadDataFromJSON(rows);
 // console.log("Total Records:", data.length);
 
-const filtered = rows;
-const filterFreqs = Frequencies();
-for (let r of rows) {
-  filterFreqs.add(r[2]);
-}
+async function simpleCheck() {
+  const filtered = rows;
+  const filterFreqs = Frequencies();
+  for (let r of rows) {
+    filterFreqs.add(r[2]);
+  }
 
-// console.log(rows.filter((r) => r[3] == "grey-pink"));
+  // console.log(rows.filter((r) => r[3] == "grey-pink"));
 
-const topK = filterFreqs.getSortedEntries().slice(0, 5000);
-const topKNames = new Set(topK.map((n) => n[0]));
-const typoMap = new Map();
+  const topK = filterFreqs.getSortedEntries().slice(0, 5000);
+  const topKNames = new Set(topK.map((n) => n[0]));
+  const typoMap = new Map();
 
-// for (let t of topK) {
-//   console.log(`${t[0]} (${t[1]})`);
-// }
+  // For the top K filtered results, find results
+  // that were popular but filtered out
 
-// For the top K filtered results, find results
-// that were popular but filtered out
-
-const SHOW_ONLY_DELS = true;
-console.log("Loading All Records");
-const allRecords = await loadAnswers();
-const allFreqs = Frequencies();
-for (let r of allRecords) allFreqs.add(r[2]);
-const topKAll = 10_000;
-const allEntries = allFreqs.getSortedEntries().slice(0, topKAll);
-console.log("Missing Entries:");
-for (let t of allEntries) {
-  const name = t[0];
-  if (!topKNames.has(name)) {
-    let typo;
-    if (typoMap.has(name)) {
-      typo = typoMap.get(name);
-    } else {
-      const fixed = rows.find((r) => {
-        return r[3] == name;
-      });
-      if (fixed) {
-        const fixedName = fixed[2];
-        typo = fixedName;
-        typoMap.set(name, fixedName);
+  const SHOW_ONLY_DELS = true;
+  console.log("Loading All Records");
+  const allRecords = await loadAnswers();
+  const allFreqs = Frequencies();
+  for (let r of allRecords) allFreqs.add(r[2]);
+  const topKAll = 10_000;
+  const allEntries = allFreqs.getSortedEntries().slice(0, topKAll);
+  console.log("Missing Entries:");
+  for (let t of allEntries) {
+    const name = t[0];
+    if (!topKNames.has(name)) {
+      let typo;
+      if (typoMap.has(name)) {
+        typo = typoMap.get(name);
+      } else {
+        const fixed = rows.find((r) => {
+          return r[3] == name;
+        });
+        if (fixed) {
+          const fixedName = fixed[2];
+          typo = fixedName;
+          typoMap.set(name, fixedName);
+        }
       }
-    }
 
-    const isShow = SHOW_ONLY_DELS ? !typo : true;
-    if (isShow) {
-      const suffix = typo ? typo : "(del)";
-      console.log(`${t[0]} (${t[1]}) --> ${suffix}`);
+      const isShow = SHOW_ONLY_DELS ? !typo : true;
+      if (isShow) {
+        const suffix = typo ? typo : "(del)";
+        console.log(`${t[0]} (${t[1]}) --> ${suffix}`);
+      }
     }
   }
 }
@@ -91,3 +98,21 @@ function loadAnswers(opts = {}) {
     });
   return promise;
 }
+
+// to check:
+// murple
+// lait
+// agua
+// azul
+// "malva",
+// navi
+//grayple
+//catachan
+//tarheel
+//midori
+//tardis
+//marino
+//meconium
+//schwarz
+//roi
+//altrosa

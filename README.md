@@ -86,10 +86,26 @@ TODO: expand
 
 - murex
 - hooloovoo
+- flicts
 - blue screen of death
 - od green
 - hr block green
 - ups brown
+- caesious
+- grape ape
+- non-photo blue
+- bole
+- tinky winky
+- purple mountain magesty, purple people eater
+- envy (all green, 15 votes), money (18 votes)
+- Karitane yellow
+- bistre
+- grey poupon
+- feldgrau
+- meconium
+- sinopia
+- icterine
+- falu red
 
 ## License
 

@@ -1,0 +1,6022 @@
+[
+  {
+    "label": "preiwinkle",
+    "keep": "MAYBE",
+    "suggestion": "periwinkle"
+  },
+  {
+    "label": "auburgine",
+    "keep": "MAYBE",
+    "suggestion": "aubergine"
+  },
+  {
+    "label": "magenat",
+    "keep": "MAYBE",
+    "suggestion": "magenta"
+  },
+  {
+    "label": "errr",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "cinammon",
+    "keep": "MAYBE",
+    "suggestion": "cinnamon"
+  },
+  {
+    "label": "pen",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "baje",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pastelle purple",
+    "keep": "MAYBE",
+    "suggestion": "pastel purple"
+  },
+  {
+    "label": "purple elephant",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "deepskyblue",
+    "keep": "MAYBE",
+    "suggestion": "deep sky blue"
+  },
+  {
+    "label": "moreno",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "grandmas couch",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "giraffe",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "slat",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "maria",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "orangina",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "lilah",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "dak green",
+    "keep": "MAYBE",
+    "suggestion": "dark green"
+  },
+  {
+    "label": "golf green green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "een",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "reflection",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "yo mamma",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "asda",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "dfas",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "oooh pretty",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "vernil",
+    "keep": "MAYBE",
+    "suggestion": "verdigris"
+  },
+  {
+    "label": "cerrulian",
+    "keep": "MAYBE",
+    "suggestion": "cerulean"
+  },
+  {
+    "label": "field",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "brains",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "caca brown",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "gina",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "terquois",
+    "keep": "MAYBE",
+    "suggestion": "turquoise"
+  },
+  {
+    "label": "windows 31 blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mayve",
+    "keep": "MAYBE",
+    "suggestion": "mauve"
+  },
+  {
+    "label": "magnta",
+    "keep": "MAYBE",
+    "suggestion": "magenta"
+  },
+  {
+    "label": "steele",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "springier green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "graey",
+    "keep": "MAYBE",
+    "suggestion": "gray"
+  },
+  {
+    "label": "vague",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "browish",
+    "keep": "MAYBE",
+    "suggestion": "brownish"
+  },
+  {
+    "label": "green or brown",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "emerals",
+    "keep": "MAYBE",
+    "suggestion": "emeralds"
+  },
+  {
+    "label": "yo mama",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "nature",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "yellow or green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "magestic purple",
+    "keep": "MAYBE",
+    "suggestion": "majestic purple"
+  },
+  {
+    "label": "darg green",
+    "keep": "MAYBE",
+    "suggestion": "dark green"
+  },
+  {
+    "label": "blueple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "maue",
+    "keep": "MAYBE",
+    "suggestion": "mauve"
+  },
+  {
+    "label": "light re",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sfa",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "roger",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "nutella",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "horrendous",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "dark blur",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "aquq",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "microsoft",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "emrald",
+    "keep": "MAYBE",
+    "suggestion": "emerald"
+  },
+  {
+    "label": "skylight",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "michelle",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "socks",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "golfgreen",
+    "keep": "MAYBE",
+    "suggestion": "golf green"
+  },
+  {
+    "label": "cuan",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "antique",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "chewing gum",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "reb brown",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "granny apple smith green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "darkgrayblue",
+    "keep": "MAYBE",
+    "suggestion": "dark gray blue"
+  },
+  {
+    "label": "steelgray",
+    "keep": "MAYBE",
+    "suggestion": "steel gray"
+  },
+  {
+    "label": "capuccino",
+    "keep": "MAYBE",
+    "suggestion": "cappuccino"
+  },
+  {
+    "label": "blusih purple",
+    "keep": "MAYBE",
+    "suggestion": "blush purple"
+  },
+  {
+    "label": "aquz",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "muffin",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "greenlike",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "blueisher",
+    "keep": "MAYBE",
+    "suggestion": "blueish"
+  },
+  {
+    "label": "graysih blue",
+    "keep": "MAYBE",
+    "suggestion": "grayish blue"
+  },
+  {
+    "label": "dlue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "boobies",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "chlorophyl",
+    "keep": "MAYBE",
+    "suggestion": "chlorophyll"
+  },
+  {
+    "label": "creamsickle",
+    "keep": "MAYBE",
+    "suggestion": "creamsicle"
+  },
+  {
+    "label": "purpleh",
+    "keep": "MAYBE",
+    "suggestion": "purplish"
+  },
+  {
+    "label": "alison",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "fushica",
+    "keep": "MAYBE",
+    "suggestion": "fuchsia"
+  },
+  {
+    "label": "charturse",
+    "keep": "MAYBE",
+    "suggestion": "chartreuse"
+  },
+  {
+    "label": "iraq",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "purplee",
+    "keep": "MAYBE",
+    "suggestion": "purple"
+  },
+  {
+    "label": "foo",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "beigr",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "few",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mac cheese",
+    "keep": "MAYBE",
+    "suggestion": "mac and cheese"
+  },
+  {
+    "label": "pue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "drk pink",
+    "keep": "MAYBE",
+    "suggestion": "dark pink"
+  },
+  {
+    "label": "yellowly brown",
+    "keep": "MAYBE",
+    "suggestion": "yellowish brown"
+  },
+  {
+    "label": "purpleybrown",
+    "keep": "MAYBE",
+    "suggestion": "purplish brown"
+  },
+  {
+    "label": "elmo",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "brick re",
+    "keep": "MAYBE",
+    "suggestion": "brick red"
+  },
+  {
+    "label": "vivd blue",
+    "keep": "MAYBE",
+    "suggestion": "vivid blue"
+  },
+  {
+    "label": "fuschie",
+    "keep": "MAYBE",
+    "suggestion": "fuchsia"
+  },
+  {
+    "label": "block blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mute teal",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "rec",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "blua",
+    "keep": "MAYBE",
+    "suggestion": "blue"
+  },
+  {
+    "label": "lush",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "buish gray",
+    "keep": "MAYBE",
+    "suggestion": "bluish gray"
+  },
+  {
+    "label": "rest",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "kate",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "browon",
+    "keep": "MAYBE",
+    "suggestion": "brown"
+  },
+  {
+    "label": "blacj",
+    "keep": "MAYBE",
+    "suggestion": "black"
+  },
+  {
+    "label": "frogger",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "fucschia",
+    "keep": "MAYBE",
+    "suggestion": "fuchsia"
+  },
+  {
+    "label": "dontknow",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pubple",
+    "keep": "MAYBE",
+    "suggestion": "purple"
+  },
+  {
+    "label": "yerrow",
+    "keep": "MAYBE",
+    "suggestion": "yellow"
+  },
+  {
+    "label": "cyann",
+    "keep": "MAYBE",
+    "suggestion": "cyan"
+  },
+  {
+    "label": "greent",
+    "keep": "MAYBE",
+    "suggestion": "green"
+  },
+  {
+    "label": "tarnish",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "manatee",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "geen blue",
+    "keep": "MAYBE",
+    "suggestion": "green blue"
+  },
+  {
+    "label": "greeg",
+    "keep": "MAYBE",
+    "suggestion": "green"
+  },
+  {
+    "label": "fucksia",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "st patricks day",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "boue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "navey",
+    "keep": "MAYBE",
+    "suggestion": "navy"
+  },
+  {
+    "label": "cadillac",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "liac",
+    "keep": "MAYBE",
+    "suggestion": "lilac"
+  },
+  {
+    "label": "darl green",
+    "keep": "MAYBE",
+    "suggestion": "dark green"
+  },
+  {
+    "label": "browb",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "bourdeux",
+    "keep": "MAYBE",
+    "suggestion": "bordeaux"
+  },
+  {
+    "label": "forever",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "grack",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "robot",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "vommit green",
+    "keep": "MAYBE",
+    "suggestion": "vomit green"
+  },
+  {
+    "label": "treegreen",
+    "keep": "MAYBE",
+    "suggestion": "tree green"
+  },
+  {
+    "label": "shrek",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "angela",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "carl",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "submarine",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "unattractive",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "lightyellow",
+    "keep": "MAYBE",
+    "suggestion": "light yellow"
+  },
+  {
+    "label": "moive",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "greensih",
+    "keep": "MAYBE",
+    "suggestion": "greenish"
+  },
+  {
+    "label": "seattle",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tinkerbell",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "marvin",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "elecric blue",
+    "keep": "MAYBE",
+    "suggestion": "electric blue"
+  },
+  {
+    "label": "grosser",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "lemon and lime",
+    "keep": "MAYBE",
+    "suggestion": "lemon lime"
+  },
+  {
+    "label": "blade",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "gecko",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "vomitous",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "turkies",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "peachypink",
+    "keep": "MAYBE",
+    "suggestion": "peachy pink"
+  },
+  {
+    "label": "electic blue",
+    "keep": "MAYBE",
+    "suggestion": "electric blue"
+  },
+  {
+    "label": "matthew",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "fgf",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "burundy",
+    "keep": "MAYBE",
+    "suggestion": "burgundy"
+  },
+  {
+    "label": "browwn",
+    "keep": "MAYBE",
+    "suggestion": "brown"
+  },
+  {
+    "label": "aubern",
+    "keep": "MAYBE",
+    "suggestion": "auburn"
+  },
+  {
+    "label": "laguna",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sunbeam",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "auqumarine",
+    "keep": "MAYBE",
+    "suggestion": "aquamarine"
+  },
+  {
+    "label": "doodoo",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "boisenberry",
+    "keep": "MAYBE",
+    "suggestion": "boysenberry"
+  },
+  {
+    "label": "cinnibar",
+    "keep": "MAYBE",
+    "suggestion": "cinnabar"
+  },
+  {
+    "label": "champaign",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ribena",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "yel",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "fuchsi",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "lighterblue",
+    "keep": "MAYBE",
+    "suggestion": "lighter blue"
+  },
+  {
+    "label": "greean",
+    "keep": "MAYBE",
+    "suggestion": "green"
+  },
+  {
+    "label": "iceburg blue",
+    "keep": "MAYBE",
+    "suggestion": "iceberg blue"
+  },
+  {
+    "label": "aqaumarine",
+    "keep": "MAYBE",
+    "suggestion": "aquamarine"
+  },
+  {
+    "label": "idunno",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "peaceful",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "cheerful",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "gloomy",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "gak",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "little",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "person",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "hatsune miku",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "yelloww",
+    "keep": "MAYBE",
+    "suggestion": "yellow"
+  },
+  {
+    "label": "ms blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "azue",
+    "keep": "MAYBE",
+    "suggestion": "azure"
+  },
+  {
+    "label": "magebta",
+    "keep": "MAYBE",
+    "suggestion": "magenta"
+  },
+  {
+    "label": "foxy",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "lesbian",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "diarrea",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "green kelly",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "grinch",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "burgundi",
+    "keep": "MAYBE",
+    "suggestion": "burgundy"
+  },
+  {
+    "label": "khakki",
+    "keep": "MAYBE",
+    "suggestion": "khaki"
+  },
+  {
+    "label": "hispanic",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mulbury",
+    "keep": "MAYBE",
+    "suggestion": "mulberry"
+  },
+  {
+    "label": "light blus",
+    "keep": "MAYBE",
+    "suggestion": "light blue"
+  },
+  {
+    "label": "brigh purple",
+    "keep": "MAYBE",
+    "suggestion": "bright purple"
+  },
+  {
+    "label": "pastelblue",
+    "keep": "MAYBE",
+    "suggestion": "pastel blue"
+  },
+  {
+    "label": "youre",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "haha",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "perfect sky",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "brick house",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "azul marinho",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "hazlenut",
+    "keep": "MAYBE",
+    "suggestion": "hazelnut"
+  },
+  {
+    "label": "type of blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "henrietta",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "lupin",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "olive drag",
+    "keep": "NO",
+    "suggestion": "olive drab"
+  },
+  {
+    "label": "green hue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "punch",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "spearamint",
+    "keep": "MAYBE",
+    "suggestion": "spearmint"
+  },
+  {
+    "label": "porky pink",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "gaudy",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "murder",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "probably",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "prown",
+    "keep": "NO",
+    "suggestion": "brown"
+  },
+  {
+    "label": "stem",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "caca green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "clove",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "simple purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "opaque yellow",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "cyangreen",
+    "keep": "MAYBE",
+    "suggestion": "cyan green"
+  },
+  {
+    "label": "verdino",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "cyane",
+    "keep": "NO",
+    "suggestion": "cyan"
+  },
+  {
+    "label": "blue chiaro",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "kthxbai",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "green damnit",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mar",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "atoll blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "seledine",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "himmelblau",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "gld",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "grun",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "puk",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "yelloy green",
+    "keep": "MAYBE",
+    "suggestion": "yellow green"
+  },
+  {
+    "label": "violen",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mignight blue",
+    "keep": "MAYBE",
+    "suggestion": "midnight blue"
+  },
+  {
+    "label": "cean",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "wait",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "indigp",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "greend",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "baishe",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "oragnge",
+    "keep": "MAYBE",
+    "suggestion": "orange"
+  },
+  {
+    "label": "purpz",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "yeal",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "beight",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "greeish",
+    "keep": "MAYBE",
+    "suggestion": "greenish"
+  },
+  {
+    "label": "rice",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "greel",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "fiuscha",
+    "keep": "MAYBE",
+    "suggestion": "fuchsia"
+  },
+  {
+    "label": "ligt purple",
+    "keep": "MAYBE",
+    "suggestion": "light purple"
+  },
+  {
+    "label": "two",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ombre",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "plush",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "medow green",
+    "keep": "MAYBE",
+    "suggestion": "meadow green"
+  },
+  {
+    "label": "purplew",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "yep",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "waffle",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "oreange",
+    "keep": "MAYBE",
+    "suggestion": "orange"
+  },
+  {
+    "label": "rey",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "fusion",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "australia",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ceruleon",
+    "keep": "MAYBE",
+    "suggestion": "cerulean"
+  },
+  {
+    "label": "greemn",
+    "keep": "MAYBE",
+    "suggestion": "green"
+  },
+  {
+    "label": "eye searing",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "grya",
+    "keep": "MAYBE",
+    "suggestion": "gray"
+  },
+  {
+    "label": "liem green",
+    "keep": "MAYBE",
+    "suggestion": "lime green"
+  },
+  {
+    "label": "relax",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ron",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "eyesore",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "bold",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "horrific",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "peenk",
+    "keep": "MAYBE",
+    "suggestion": "pink"
+  },
+  {
+    "label": "delilah",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "avatar",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "skidmark",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "wite",
+    "keep": "MAYBE",
+    "suggestion": "white"
+  },
+  {
+    "label": "dark greemn",
+    "keep": "MAYBE",
+    "suggestion": "dark green"
+  },
+  {
+    "label": "turpentine",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "eal",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "winterfresh",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "seinna",
+    "keep": "MAYBE",
+    "suggestion": "sienna"
+  },
+  {
+    "label": "piunk",
+    "keep": "MAYBE",
+    "suggestion": "pink"
+  },
+  {
+    "label": "bloe",
+    "keep": "MAYBE",
+    "suggestion": "blue"
+  },
+  {
+    "label": "flash",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "cyn",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "maeve",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ashley",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "argon",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "email",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "favorite",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "crema",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "laven",
+    "keep": "MAYBE",
+    "suggestion": "lavender"
+  },
+  {
+    "label": "reef",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "peech",
+    "keep": "MAYBE",
+    "suggestion": "peach"
+  },
+  {
+    "label": "neongrn",
+    "keep": "MAYBE",
+    "suggestion": "neon green"
+  },
+  {
+    "label": "guess not",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "dogshit",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "darkmagenta",
+    "keep": "MAYBE",
+    "suggestion": "dark magenta"
+  },
+  {
+    "label": "happiness",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sky blur",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "alfred",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "greenis",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "magenata",
+    "keep": "MAYBE",
+    "suggestion": "magenta"
+  },
+  {
+    "label": "khaky",
+    "keep": "MAYBE",
+    "suggestion": "khaki"
+  },
+  {
+    "label": "barbi pink",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ceris",
+    "keep": "MAYBE",
+    "suggestion": "cerise"
+  },
+  {
+    "label": "lavernder",
+    "keep": "MAYBE",
+    "suggestion": "lavender"
+  },
+  {
+    "label": "touquise",
+    "keep": "MAYBE",
+    "suggestion": "turquoise"
+  },
+  {
+    "label": "could",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "hue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "bloom",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "fuzzy",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "dennis",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tan mm",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "diahrrea",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "rosacea",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pigeon",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "burt umber",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "fleshlight",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "maupe",
+    "keep": "MAYBE",
+    "suggestion": "mauve"
+  },
+  {
+    "label": "mustar",
+    "keep": "MAYBE",
+    "suggestion": "mustard"
+  },
+  {
+    "label": "dark p",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "queer",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "plaid",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pluto",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "lme green",
+    "keep": "MAYBE",
+    "suggestion": "lime green"
+  },
+  {
+    "label": "kkk",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "roses",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "broon",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "christ",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "daffodill",
+    "keep": "MAYBE",
+    "suggestion": "daffodil"
+  },
+  {
+    "label": "areola pink",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "lite teal",
+    "keep": "MAYBE",
+    "suggestion": "light teal"
+  },
+  {
+    "label": "dary cyan",
+    "keep": "MAYBE",
+    "suggestion": "dark cyan"
+  },
+  {
+    "label": "guts",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pony pink",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "karitane yellow",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "blueishgray",
+    "keep": "MAYBE",
+    "suggestion": "blueish gray"
+  },
+  {
+    "label": "brunette",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pinkerton",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ooze",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "luce",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "wed",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "puble",
+    "keep": "MAYBE",
+    "suggestion": "purple"
+  },
+  {
+    "label": "b rown",
+    "keep": "MAYBE",
+    "suggestion": "brown"
+  },
+  {
+    "label": "neige",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "der",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ehhh",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mahoganey",
+    "keep": "MAYBE",
+    "suggestion": "mahogany"
+  },
+  {
+    "label": "ceylon",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "augh",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ight green",
+    "keep": "MAYBE",
+    "suggestion": "light green"
+  },
+  {
+    "label": "cyran",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "shiny",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "bluse",
+    "keep": "MAYBE",
+    "suggestion": "blue"
+  },
+  {
+    "label": "monday",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "midnightblue",
+    "keep": "MAYBE",
+    "suggestion": "midnight blue"
+  },
+  {
+    "label": "ultra",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "black not a",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "powderblue",
+    "keep": "MAYBE",
+    "suggestion": "powder blue"
+  },
+  {
+    "label": "darkturquoise",
+    "keep": "MAYBE",
+    "suggestion": "dark turquoise"
+  },
+  {
+    "label": "diarhhea",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "trees",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tell",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "scar",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pigpink",
+    "keep": "MAYBE",
+    "suggestion": "pig pink"
+  },
+  {
+    "label": "peache",
+    "keep": "MAYBE",
+    "suggestion": "peach"
+  },
+  {
+    "label": "naming",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "trapped",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ollive",
+    "keep": "MAYBE",
+    "suggestion": "olive"
+  },
+  {
+    "label": "incarnate",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tenticle pink",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "orange sorta",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "cyah",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "babypoo",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mat yellow",
+    "keep": "MAYBE",
+    "suggestion": "matte yellow"
+  },
+  {
+    "label": "fgreen",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sleep",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sean",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sy blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tangering",
+    "keep": "MAYBE",
+    "suggestion": "tangerine"
+  },
+  {
+    "label": "purrrple",
+    "keep": "MAYBE",
+    "suggestion": "purple"
+  },
+  {
+    "label": "fray",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "bourgondy",
+    "keep": "MAYBE",
+    "suggestion": "burgundy"
+  },
+  {
+    "label": "ariel",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "kangaroo",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "arizona",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "perfume",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ferrari",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "auamarine",
+    "keep": "MAYBE",
+    "suggestion": "aquamarine"
+  },
+  {
+    "label": "cheesecake",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mistake",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "cupcake",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "uh green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "kirby",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "gark green",
+    "keep": "MAYBE",
+    "suggestion": "dark green"
+  },
+  {
+    "label": "unhealthy",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "salmone",
+    "keep": "MAYBE",
+    "suggestion": "salmon"
+  },
+  {
+    "label": "yelloy",
+    "keep": "MAYBE",
+    "suggestion": "yellow"
+  },
+  {
+    "label": "oceania",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "yech",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sir",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "venus",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "squant",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "jeep",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "warmth",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "charles",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "orangutan",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "twitter",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "rick",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "grasgrn",
+    "keep": "MAYBE",
+    "suggestion": "grass green"
+  },
+  {
+    "label": "vert pomme",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sour",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "vert caca doie",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pal green",
+    "keep": "MAYBE",
+    "suggestion": "pale green"
+  },
+  {
+    "label": "internet",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "milky",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "dentist office",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "alex",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ibm",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "kevin",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "charlotte",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "fsa",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "native american",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "free",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ccyan",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mario",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "reds",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "jacob",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "hitler",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "april",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "rash",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tann",
+    "keep": "MAYBE",
+    "suggestion": "tan"
+  },
+  {
+    "label": "yaller",
+    "keep": "MAYBE",
+    "suggestion": "yeller"
+  },
+  {
+    "label": "blue fonc",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "herb",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "beize",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "brown town",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "vert fort",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "navt",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "recd",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "gelbgrn",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sk blue",
+    "keep": "MAYBE",
+    "suggestion": "sky blue"
+  },
+  {
+    "label": "oobleck",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "limade",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "cloudless",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "windows 2000",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sleepy",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "anne",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "faggy",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tean",
+    "keep": "MAYBE",
+    "suggestion": "teal"
+  },
+  {
+    "label": "syracuse",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sjy blue",
+    "keep": "MAYBE",
+    "suggestion": "sky blue"
+  },
+  {
+    "label": "bluuue",
+    "keep": "MAYBE",
+    "suggestion": "blue"
+  },
+  {
+    "label": "moar purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "alligator",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "triangle",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "damnit",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "depressed",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pistage",
+    "keep": "MAYBE",
+    "suggestion": "pistachio"
+  },
+  {
+    "label": "skinny",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "juice",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mage",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pooh",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "coyote",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "judy",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "craig",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pista",
+    "keep": "MAYBE",
+    "suggestion": "pistachio"
+  },
+  {
+    "label": "base",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "doom",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "yan",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "darky blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "70s",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "browish gray",
+    "keep": "MAYBE",
+    "suggestion": "brownish gray"
+  },
+  {
+    "label": "light salad",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "eurgh",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "lialic",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "aqua man",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "jkl",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "grapple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "aram",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "babies",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "faded glory",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "hoovooloo",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "prom dress",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "horrifying",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "lalala",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "yelloq",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "greej",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "almost",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tangreen",
+    "keep": "MAYBE",
+    "suggestion": "tan green"
+  },
+  {
+    "label": "easy green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pinks",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "led",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "palm",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ggg",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "vomitus",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "wha",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "blight blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "block",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "poyple",
+    "keep": "NO",
+    "suggestion": "purple"
+  },
+  {
+    "label": "yoda",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "loud",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pale geen",
+    "keep": "MAYBE",
+    "suggestion": "pale green"
+  },
+  {
+    "label": "ice cream",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mystery",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "titanium",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "spiceberry",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "leela",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pblue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "rachel",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "nblue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "shi",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "random",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "turcose",
+    "keep": "MAYBE",
+    "suggestion": "turquoise"
+  },
+  {
+    "label": "very",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "fear",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "hey",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "lie",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "gourd",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "grayscale",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sag",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "aqa",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pueblo",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "hair",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "herpes",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "homosexual purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "btown",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "aguamarine",
+    "keep": "MAYBE",
+    "suggestion": "aquamarine"
+  },
+  {
+    "label": "doodoo brown",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "faggy purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "laranja",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "puroke",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sdaf",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "fruity",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ciano",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "giallo",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "green militare",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "veal",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pale black",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "stan",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mit",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "moove",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "golf",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "girlish",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tael",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "alive",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "insanity",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "lighty green",
+    "keep": "MAYBE",
+    "suggestion": "light green"
+  },
+  {
+    "label": "blaugrau",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "blagh",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "got",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "brows",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "greee",
+    "keep": "NO",
+    "suggestion": "green"
+  },
+  {
+    "label": "blurp",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "idfk",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "grease",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "puc",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "donno",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "light bloe",
+    "keep": "MAYBE",
+    "suggestion": "light blue"
+  },
+  {
+    "label": "grayish gold",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "kaka",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "stench",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "frustrating",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "adam",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "derek",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "azul cielo",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "cayn",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "invisible",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "empty",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "peri",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "beats me",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "calming",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "futia",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "faded",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "bloody",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "roy",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ostrich",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "garbage",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "hope",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "plant",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "nondescript",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "with",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "azul oscuro",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "cayan",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "chartreuse sp",
+    "keep": "MAYBE",
+    "suggestion": "chartreuse"
+  },
+  {
+    "label": "seasickness",
+    "keep": "MAYBE",
+    "suggestion": "seasick"
+  },
+  {
+    "label": "ghastly",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mat blue",
+    "keep": "MAYBE",
+    "suggestion": "matte blue"
+  },
+  {
+    "label": "slategray",
+    "keep": "MAYBE",
+    "suggestion": "slate gray"
+  },
+  {
+    "label": "infinity",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "blow",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "joker",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "blastoise",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "timber wolf",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "flint",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "zelda",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "marina",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "groan",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "lie green",
+    "keep": "MAYBE",
+    "suggestion": "lye green"
+  },
+  {
+    "label": "lello",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pizza",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "curelean",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mucous",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "albino",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "navajo",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "emo",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ogre",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "magneto",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "puppy",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "gum",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "spleen",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "corsair blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "baby girl",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "rotten",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "hazel blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "elven green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "purple er",
+    "keep": "MAYBE",
+    "suggestion": "purpler"
+  },
+  {
+    "label": "cesious",
+    "keep": "MAYBE",
+    "suggestion": "caesious"
+  },
+  {
+    "label": "blu3",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "bleue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "homosexual pink",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "cute",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "eeew",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "purple and pink",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ora",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "doctors office",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "asian yellow",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sweet",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "much",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "organ",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "jake",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "answer",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "hippo",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "blind",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "herbert",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "france",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "jessica",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "primer",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pavement gray",
+    "keep": "MAYBE",
+    "suggestion": "pavement"
+  },
+  {
+    "label": "matte",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sandal",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "cookie",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "fun",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "arsenic",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "plain",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "video game grass green",
+    "keep": "MAYBE",
+    "suggestion": "video game green"
+  },
+  {
+    "label": "eighties",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "yellowis green",
+    "keep": "MAYBE",
+    "suggestion": "yellowish green"
+  },
+  {
+    "label": "stick brown",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "andy",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "institutional",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sweater",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "nathan",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "timmy",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "serious",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "andrew",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pollution",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "arancione",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "windows 31",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pop",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "aaargh",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "fishy",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "heart",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "fruit",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "old lady",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "apple blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "fushiaish",
+    "keep": "MAYBE",
+    "suggestion": "fuchsiaish"
+  },
+  {
+    "label": "mmm",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "margaret",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pum",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ms paint",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "springtime",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tango",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "grigio",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "phlem",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tiffanys",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "stool",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "lip",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tim",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "light g",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "brownies",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "babier blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "your sister",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "safari",
+    "keep": "MAYBE",
+    "suggestion": "safari green"
+  },
+  {
+    "label": "255 0 255",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "rgb magenta",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "plu",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "olie",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "senape",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "syrup",
+    "keep": "MAYBE",
+    "suggestion": "syrup brown"
+  },
+  {
+    "label": "saddle",
+    "keep": "MAYBE",
+    "suggestion": "saddle brown"
+  },
+  {
+    "label": "frederick",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "frenchs mustard",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "dunkellila",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "schwarz",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "cryan",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "three",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "crayola",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "garfield",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "hate",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "coco",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "off",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "jeremy",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "jello",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "vibrant",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mine",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "unappealing",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "grety",
+    "keep": "NO",
+    "suggestion": "gray"
+  },
+  {
+    "label": "barack obama",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "treal",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "reptar",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "boat",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ireland",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "taint",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "grunge",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "hreen",
+    "keep": "MAYBE",
+    "suggestion": "green"
+  },
+  {
+    "label": "nougat",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "kool aid",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "time",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "eugh",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "horse",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sap",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "satan",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "type of green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pinj",
+    "keep": "MAYBE",
+    "suggestion": "pink"
+  },
+  {
+    "label": "rainbow",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "anymore",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "cmon",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "dessert",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "squa",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "gertrude",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "greal",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ikb",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "homosexual",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "amanda",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mau",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "orange dark",
+    "keep": "MAYBE",
+    "suggestion": "dark orange"
+  },
+  {
+    "label": "clay pot",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "post it note",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "great",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "soothing",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mallow",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "san",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "leave",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "because",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "box",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "blut",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "psychadelic purple",
+    "keep": "MAYBE",
+    "suggestion": "psychedelic purple"
+  },
+  {
+    "label": "hide",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "gan green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "retarded",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "epic",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "dull forest",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "gang green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "hot dog",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "eyeshadow",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "chuck norris",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tequila",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "lint",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "wut",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "steal",
+    "keep": "NO",
+    "suggestion": "steel"
+  },
+  {
+    "label": "plastic",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "soft",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "photosynthesis",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "aquateal",
+    "keep": "MAYBE",
+    "suggestion": "aqua teal"
+  },
+  {
+    "label": "blue bell",
+    "keep": "MAYBE",
+    "suggestion": "bluebell"
+  },
+  {
+    "label": "chair",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "graple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "damask",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "blag",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "brine",
+    "keep": "MAYBE",
+    "suggestion": "brine green"
+  },
+  {
+    "label": "guess",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "durple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "uhm",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "green n",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "silly",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pokemon",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "cookie monster",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "chino",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "jaffa",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "skelton exotic sangria",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "diahrea",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "rage",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "majestic",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pottery",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "jerry",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "bathroom",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "grime",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "jason",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "violetto",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "carolina",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "office",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "brink",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "astro turf",
+    "keep": "MAYBE",
+    "suggestion": "astroturf"
+  },
+  {
+    "label": "nancy",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "vapor",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "barley",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "cubicle",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "stain",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "bulbasaur",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "halloween",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "chiffon",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "gorgeous",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "good bye",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "fus",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pikachu",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "eye",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tam",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "worse",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "oil",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "trout",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "blue tint",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "william",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "aua",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pete",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "irish spring",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sakura",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "samantha",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "margarine",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "neo green",
+    "keep": "MAYBE",
+    "suggestion": "neon green"
+  },
+  {
+    "label": "fas",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tin",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "wolf",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "toad",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "lion",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "washed out",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tiger",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sprite",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "soup",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mojito",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "air",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "piggy",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "milk",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sewer",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "victoria",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "rhino",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "carbon",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "foundation",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "moleskin",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "light purplse",
+    "keep": "MAYBE",
+    "suggestion": "light purple"
+  },
+  {
+    "label": "bright grass",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "light wood",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "gray glue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "orchard",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "blue and green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "other blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "straight purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pastey green",
+    "keep": "MAYBE",
+    "suggestion": "pasty green"
+  },
+  {
+    "label": "nay blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pink light",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "irish",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "amarelo",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "paisley green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "manky green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tundra",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "purply white",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "birch green",
+    "keep": "MAYBE",
+    "suggestion": "birch"
+  },
+  {
+    "label": "bulbasaur green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "chicken",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "parma",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "babys breath",
+    "keep": "MAYBE",
+    "suggestion": "babys breath pink"
+  },
+  {
+    "label": "blastoise blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "yet another shade of green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "shade of pink",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "yellow with a tinge of green",
+    "keep": "MAYBE",
+    "suggestion": "yellowish green"
+  },
+  {
+    "label": "blue with a little gray",
+    "keep": "MAYBE",
+    "suggestion": "blue gray"
+  },
+  {
+    "label": "limer",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tanned",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "white brown",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "clouds",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "java",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "purple or blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "other purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pudding",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "moldy",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "loam",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ground",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "hemlock",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "secondary green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "earth tone",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "porpoise",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tomato bisque",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mojave",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "coffee with milk",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "bourgogne",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "summer",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "blue ciel",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "olive oil",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "maraschino",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "apple blue sea green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "html blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "reddish purplish",
+    "keep": "MAYBE",
+    "suggestion": "reddish purply"
+  },
+  {
+    "label": "ocean depths",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "green light blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "martian",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sand paper",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "fluorescent",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "cadmium",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "flush",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "gatorade",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "kind of orange",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "not black",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "not quite purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "bathroom tile",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "doctors office green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "hospital walls",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mute pink",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "cherry wood",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "classic green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "blue velvet",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "cream purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "manila envelope",
+    "keep": "MAYBE",
+    "suggestion": "manila"
+  },
+  {
+    "label": "grunge green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "bright dark green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "lightest purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "non photo blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "desert storm",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "dark off white",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "horrible blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "columbia",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "flower blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "bathroom blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "kentucky blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sly blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "spring purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "darker pastel green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "spring sky blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "dark green forest green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "dark marigold",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "default green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "dull sky",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "purple heather",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "forest floor",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "grape ape",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "blue jeans blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "calm purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "flaming purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "parrot",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "regular purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "post it",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "windows desktop",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ups",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "crayon",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "darker",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pepto bismal",
+    "keep": "MAYBE",
+    "suggestion": "pepto bismol"
+  },
+  {
+    "label": "windows 95 desktop",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "alien",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "wizard purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "blue and purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "brain",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "squirrel",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "brown bear",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "omg green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "green with blue",
+    "keep": "MAYBE",
+    "suggestion": "green with a touch of blue"
+  },
+  {
+    "label": "blue green green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "not pink",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "not quite navy",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "batman",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "yet another shade of blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "orange light",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "kelly blue",
+    "keep": "MAYBE",
+    "suggestion": "kelly green blue"
+  },
+  {
+    "label": "aqua marine green",
+    "keep": "MAYBE",
+    "suggestion": "aquamarine green"
+  },
+  {
+    "label": "day glow green",
+    "keep": "MAYBE",
+    "suggestion": "dayglow green"
+  },
+  {
+    "label": "blue jay",
+    "keep": "MAYBE",
+    "suggestion": "blue jay blue"
+  },
+  {
+    "label": "purple heart",
+    "keep": "MAYBE",
+    "suggestion": "purple heart purple"
+  },
+  {
+    "label": "burned yellow",
+    "keep": "MAYBE",
+    "suggestion": "burnt yellow"
+  },
+  {
+    "label": "fake grape",
+    "keep": "MAYBE",
+    "suggestion": "fake grape purple"
+  },
+  {
+    "label": "brown light",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "peanut",
+    "keep": "MAYBE",
+    "suggestion": "peanut brown"
+  },
+  {
+    "label": "purblue",
+    "keep": "MAYBE",
+    "suggestion": "purple blue"
+  },
+  {
+    "label": "naval blue",
+    "keep": "MAYBE",
+    "suggestion": "navy blue"
+  },
+  {
+    "label": "jean",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "noir",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "silk",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "shadow",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "chlorine",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mars",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "bread",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "haze",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "gravy",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "plume",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "valentine",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "purink",
+    "keep": "MAYBE",
+    "suggestion": "pink purple"
+  },
+  {
+    "label": "sunburst",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "peru",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "natural",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "bole",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "savannah",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tinky winky",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ceramic",
+    "keep": "MAYBE",
+    "suggestion": ""
+  },
+  {
+    "label": "shell",
+    "keep": "MAYBE",
+    "suggestion": ""
+  },
+  {
+    "label": "midori",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "terra",
+    "keep": "MAYBE",
+    "suggestion": ""
+  },
+  {
+    "label": "mediterranean",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "not purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "cloudy",
+    "keep": "MAYBE",
+    "suggestion": ""
+  },
+  {
+    "label": "full green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "juniper",
+    "keep": "MAYBE",
+    "suggestion": ""
+  },
+  {
+    "label": "mouse",
+    "keep": "MAYBE",
+    "suggestion": ""
+  },
+  {
+    "label": "bear",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "evening",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "radioactive",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "yoshi",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "light blur",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "light geen",
+    "keep": "MAYBE",
+    "suggestion": "light green"
+  },
+  {
+    "label": "fire engine",
+    "keep": "MAYBE",
+    "suggestion": "fire engine red"
+  },
+  {
+    "label": "robin hood",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "windows 95 background",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ciel",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "cold",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "powder",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mermaid",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "teil",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "shade of purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sunny",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "blues",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tiffany",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "royalty",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "purplue",
+    "keep": "MAYBE",
+    "suggestion": "purple"
+  },
+  {
+    "label": "maroon 5",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "poison",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "electric",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "flora",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "paper",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "link green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "too pink",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pimpin purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sort of green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mostly green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pretty pink",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "purple people eater",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pale dark pink",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pale dark purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "really purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pink pink",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "hawt pink",
+    "keep": "MAYBE",
+    "suggestion": "hot pink"
+  },
+  {
+    "label": "rain",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "chalkboard",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "turf",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "lemonade",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "windows",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "delicious",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "fir",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "yolk",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "dawn",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "raf blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "hydrangea",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "marmalade",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "grayeen",
+    "keep": "MAYBE",
+    "suggestion": "grayish"
+  },
+  {
+    "label": "shrimp",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "brownie",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "envy",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "syringa",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "liche purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tealer",
+    "keep": "MAYBE",
+    "suggestion": "teal"
+  },
+  {
+    "label": "creamsicle orange",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "creamy",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "margarita",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "jaune",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "flower",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "baby",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tortoise",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "inchworm",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tumbleweed",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "opaque green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "bluegrass",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ubuntu",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "corn blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "meat",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "shark",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sewage",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "yellow with a bit of green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "blue or purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "different blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "caqui",
+    "keep": "MAYBE",
+    "suggestion": "khaki"
+  },
+  {
+    "label": "candy",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "highlighter",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "lizard",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "scrubs",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "other green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "bray",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ghost",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "rot",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "purplink",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ceil",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "money",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "dusty",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "white purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "white gray",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sickly",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "leafy",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "new leaf",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "rosemary",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "maple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "biscuit",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "king blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "rojo",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "hospital",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "mould",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "swimming pool",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tuna",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sierra",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "kind of green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "not blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "dinosaur",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "band aid",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "purple dark",
+    "keep": "MAYBE",
+    "suggestion": "dark purple"
+  },
+  {
+    "label": "different green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "daisy",
+    "keep": "MAYBE",
+    "suggestion": "daisy yellow"
+  },
+  {
+    "label": "cactus",
+    "keep": "MAYBE",
+    "suggestion": "cactus green"
+  },
+  {
+    "label": "cream orange",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "citrus",
+    "keep": "MAYBE",
+    "suggestion": "citrus orange"
+  },
+  {
+    "label": "pickle",
+    "keep": "MAYBE",
+    "suggestion": "pickle green"
+  },
+  {
+    "label": "mute green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "baby food",
+    "keep": "MAYBE",
+    "suggestion": "baby food yellow"
+  },
+  {
+    "label": "uniform blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "easter",
+    "keep": "MAYBE",
+    "suggestion": "easter yellow"
+  },
+  {
+    "label": "flax",
+    "keep": "MAYBE",
+    "suggestion": "flax yellow"
+  },
+  {
+    "label": "morado",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "horrid",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tile",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "metal",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "myrtle",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "han purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "phthalo blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "cool",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "robin",
+    "keep": "MAYBE",
+    "suggestion": "robin egg blue"
+  },
+  {
+    "label": "tongue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "shade of green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "blue with a hint of green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "green lime",
+    "keep": "MAYBE",
+    "suggestion": "lime green"
+  },
+  {
+    "label": "kinda green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "jungle",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "fake green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "musk",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "fish",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "odd green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "chocolate milk",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "green light",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "smurf",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "salad",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "orange orange",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "love",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "violent",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "tree",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "frog",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pool",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "gris",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "windows 95",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "rgb blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "normal blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "purple purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "ultra violet",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "hunters green",
+    "keep": "MAYBE",
+    "suggestion": "hunter green"
+  },
+  {
+    "label": "standard green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "gray gray",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "punk",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "overcast",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "macaroni",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "agua",
+    "keep": "MAYBE",
+    "suggestion": "aqua"
+  },
+  {
+    "label": "papaya",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pumpkin pie",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "bittersweet",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "50 gray",
+    "keep": "MAYBE",
+    "suggestion": "50s gray"
+  },
+  {
+    "label": "violent purple",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "violent pink",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "muddy",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "plue",
+    "keep": "NO",
+    "suggestion": "blue"
+  },
+  {
+    "label": "rgb green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "cafe",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "glue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "latte",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "neutral",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "grown",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pastel",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "dull",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "vert",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "grue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pig",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "burnt",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "camouflage",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "spring",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "turtle",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "bright",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "light",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "lily",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "sunset",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "elephant",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "fog",
+    "keep": "MAYBE",
+    "suggestion": "fog gray"
+  },
+  {
+    "label": "water",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "white green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "pure green",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "smoke",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "solid blue",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "kelly",
+    "keep": "MAYBE",
+    "suggestion": "kelly green"
+  },
+  {
+    "label": "light brick",
+    "keep": "MAYBE",
+    "suggestion": "brick red"
+  },
+  {
+    "label": "concrete",
+    "keep": "MAYBE",
+    "suggestion": "concrete gray"
+  },
+  {
+    "label": "army",
+    "keep": "MAYBE",
+    "suggestion": "army green"
+  },
+  {
+    "label": "light black",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "magnolia",
+    "keep": "MAYBE",
+    "suggestion": "magnolia white"
+  },
+  {
+    "label": "ash",
+    "keep": "MAYBE",
+    "suggestion": "ash gray"
+  },
+  {
+    "label": "sunshine",
+    "keep": "MAYBE",
+    "suggestion": "sunshine yellow"
+  },
+  {
+    "label": "icky",
+    "keep": "NO",
+    "suggestion": ""
+  },
+  {
+    "label": "slime",
+    "keep": "NO",
+    "suggestion": ""
+  }
+]

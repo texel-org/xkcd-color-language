@@ -3,28 +3,28 @@ import { existsSync } from "node:fs";
 import { dirname } from "node:path";
 import Anthropic from "@anthropic-ai/sdk";
 import dotenv from "dotenv";
-import { getNameMap, loadDataFromJSON } from "./util/json.js";
+import { loadDataFromJSON } from "../util/json.js";
+import { convert } from "../util/gaussian.js";
 
 dotenv.config();
 
 // ---- config ----
 const MODEL = "claude-haiku-4-5-20251001";
 const BATCH_SIZE = 100;
-const N_SLICE_END = 10000;
+const MAX_COUNT = 15000;
+const MIN_VOTES = 1;
+const MIN_USERS = 5;
+const CURATED = false;
 const SOURCE_PATH = "data/xkcd/answers.compact.json";
 const CAUGHT_PATH = "data/llm-caught.json";
 const PROGRESS_PATH = "data/llm-progress.json";
 const MAX_ATTEMPTS = 6; // total tries per batch before giving up
 const BASE_DELAY_MS = 2000; // exponential backoff base (2s, 4s, 8s, 16s, 32s)
 const MAX_DELAY_MS = 60_000; // cap each wait at 1min
-const IS_BINARY_MODE = true;
+const IS_BINARY_MODE = false;
+const REVERSE_ORDER = true;
 
-// ---- prompt ----
-const SYSTEM_PROMPT_BINARY = `You are reviewing color terms from a crowdsourced color-naming survey for quality control.
-
-For each term, classify it as just YES or NO.
-
-=== YES — a valid color name. Be GENEROUS. Includes: ===
+const PROMPT_YES = `=== YES — a valid color name. Be GENEROUS. Includes: ===
 - Plain color words, even uncommon or single-word ones: blue, manila, bile, oxblood, taupe, cerise, ochre, mauve, fawn
 - Compound descriptive: dusty rose, rainy day, split pea soup, deep forest green, blue slate, clay gray
 - Comparative forms: pinker, purpler, redder, bluer, greener, off green, not quite blue, almost blue, mid blue, med blue
@@ -33,25 +33,45 @@ For each term, classify it as just YES or NO.
 - Compounds combining informal forms: bluey gray, reddy brown, purply blue, greenish yellow
 - Portmanteaus/mashups: breen, brorange, blellow, pinkle, bleen
 - Cultural references and brand names: kermit, ups brown, windows xp blue, blue screen of death, bsod, 1970s dodge blue, hr block, xbox green, pepto pink, accountant blue
-- Playful qualifier + color: yuck green, vomit green, icky green
-- Standalone evocative words used as colors: icky, peachy, dusty, tawny, azul, swamp, cement, dust, bruise
+- Playful qualifier + color: ugly blue, awesome green, yuck green, vomit green, icky green are all YES
+- Some like "blue 2", "eye hurting green" are YES, but just "eye hurting" or "2" are NO
 - Articles allowed: "a dark pink"
-- Numeric prefixes: "128 gray"
+- Numeric prefixes: "128 gray", "1980s green", "50 50 gray" are all YES
 - Abstract/evocative: acid trip, achromatic bright purple, rainy day
 - Some sickly things should pass as YES like seasick, toxic. Others might fall into NO
-- Things like "dark dark blue" or "green blue" or "bluish green"
+- Things like "dark dark blue" or "green blue" or "very very blue" or "bluish green" are all YES
+- Unusual and interesting colors like 'bsod' (blue screen), 'hooloovoo' or 'flicts' (fictional colors), 'hr block green', 'slime green' etc
+- Standalone evocative words used as colors: drab, dirt, sky, peas, velvet, mud, grass, forest, peachy, dusty, tawny, azul, swamp, cement, dust, bruise
+- Standalone words that could be seen as colors: neon, hunter, army, camo, sea, stone, sandy, moon, dusk, night, etc
+- Fruits and foods like "strawberry", "egg yolk", "wheat", "toast" are all evocative and thus YES`.trim();
 
-=== NO — insensitive, troll, swear, vulgar ===
+const PROMPT_NO_FRAGMENT = `
+- Keyboard mash: adgasdgsadg, asdfasdf, qwerty, aghjob, uhhh, dfh
+- Non-color words/names: adam, acool, hobo, chait, bieque beek, rawr, "ron"
+- Filler/expressions: ugh, idk, wtf, lol, aghhh
+- Vulgar without color: shitbrown, fuckyou, titface, "bite me", "yo mamma"
 - Curse words: shitbrown, fuck
 - A clear spelling error: "bron", "browpn" etc. Note that portmanteaus like brorange are YES.
-- Vulgarities: poop, spew, throwup, baby barf, vomit, pus, scab, snot, yuck
-- Insensitive or racially targeted: white people, caucasian, chinese
+- Insensitive or racially targeted: white people, caucasian, chinese, "white person"
 - Other insensitive things like confederate clothing references
-- Keyboard mash: adgasdgsadg, asdfasdf, qwerty, aghjob, uhhh, dfh
-- Vulgar without color: shitbrown, fuckyou, titface, "bite me"
-- Survey-meta: "next question", "repeat", "skip answer", "i don't know", "all", "tab", "your mom"
+- Survey-meta: "next question", "repeat", "skip answer", "i don't know", "all", "tab", "error", "blank"
+- Bare numbers with no color word
+- Clearly wrong language or made up words ("blau", 'errr', 'pen', etc)
 - Hex codes: fff, 0xfff, "#aabbcc"
-- Negative-only without a color word: "vomit face", "yuck" (alone — but "yuck green" is YES)
+- Negative-only without a color word: "vomit face", "yuck" (alone — but "yuck green" is YES)`.trim();
+
+// decide whether to curate these out or not
+// - Vulgarities: poop, spew, throwup, baby barf, vomit, pus, scab, snot, yuck, yo mamma
+
+// ---- prompt ----
+const SYSTEM_PROMPT_BINARY = `You are reviewing color terms from a crowdsourced color-naming survey for quality control.
+
+For each term, classify it as just YES or NO. The terms are already lowercase and normalized to only alphanumeric.
+
+${PROMPT_YES}
+
+=== NO — insensitive, troll, swear, vulgar ===
+${PROMPT_NO_FRAGMENT}
 
 === Output ===
 Return a single JSON array, no prose, no code fences. Echo each "label" EXACTLY as given.
@@ -65,42 +85,23 @@ If every term is YES, output exactly: []`;
 
 const SYSTEM_PROMPT_CLEAN = `You are reviewing color terms from a crowdsourced color-naming survey for quality control.
 
-For each term, classify it as YES, MAYBE, or NO.
+For each term, classify it as YES, MAYBE, or NO. The terms are already lowercase and normalized to only alphanumeric.
 
-=== YES — a valid color name. Be GENEROUS. Includes: ===
-- Plain color words, even uncommon or single-word ones: blue, manila, bile, oxblood, taupe, cerise, ochre, mauve, fawn
-- Compound descriptive: dusty rose, rainy day, split pea soup, deep forest green, blue slate, clay gray
-- Comparative forms: pinker, purpler, redder, bluer, greener
-- Suffixed color words (-ish, -y, -ey, -en, -ie all fine): greenish, pinky, bluey, reddy, golden, silvery, peachy, magentaish, purplish, orangey
-- Slang/informal contractions: fluro green, fluro orange, neon blue
-- Compounds combining informal forms: bluey gray, reddy brown, purply blue, greenish yellow
-- Portmanteaus: breen, brorange
-- Cultural references and brand names: kermit, ups brown, windows xp blue, blue screen of death, bsod, 1970s dodge blue, hr block, xbox green, pepto pink, accountant blue
-- Playful qualifier + color: yuck green, vomit green, icky green
-- Standalone evocative words used as colors: icky, peachy, dusty, tawny, brick, grape, grass, petrol, mango, melon, cotton candy, milk chocolate brown, dead grass
-- Articles allowed: "a dark pink"
-- Numeric prefixes: "128 gray"
-- Abstract/evocative: acid trip, achromatic bright purple, rainy day
-- Capitalization variants in the source data are fine — if the only "issue" is uppercase letters in the original, it is still YES.
+${PROMPT_YES}
 
 === MAYBE — narrow. ONLY for: ===
 1) clear missing-space concatenations of two color words: "darkred" → "dark red", "lightblue" → "light blue"
 2) clear misspellings/typos of a color word: "birck red" → "brick red", "gry" → "gray", "turkuoise" → "turquoise", "orang" → "orange"
 
 Do NOT use MAYBE for any of these — they are all YES with no suggestion:
-fluro green, bile, manila, bluey gray, reddy brown, golden, purpler, magentaish, greenish, peachy, silvery, oxblood, taupe, mauve, ochre, neon, fluro
+fluro green, bile, manila, bluey gray, reddy brown, golden, purpler, magentaish, brorange, pinky, greenish, peachy, silvery, oxblood, taupe, mauve, ochre, neon, fluro,
+brick, steel, robin egg, barney
+
+For example don't try to correct "robin egg" to "robin egg blue", don't try to correct "lightish green" to "light green" or "light ish green", just keep it as YES.
+Don't try to correct "bluish teal" to "blue teal" or "royal" to "royal blue", just leave the originals as YES.
 
 === NO — troll, junk, or non-color content. ===
-- Keyboard mash: adgasdgsadg, asdfasdf, qwerty, aghjob, uhhh, dfh
-- Non-color words/names: adam, acool, hobo, chait, bieque beek, rawr
-- Filler/expressions: ugh, idk, wtf, lol, aghhh
-- Vulgar without color: shitbrown, fuckyou, titface, "bite me"
-- Survey-meta: "next question", "repeat", "skip answer", "i don't know", "all", "tab", "your mom
-- Offensive/identity-based: "white person", "chinese"
-- Hex codes: fff, 0xfff, "#aabbcc"
-- Negative-only without a color word: "vomit face", "yuck" (alone — but "yuck green" is YES)
-- Bare numbers with no color word
-- Clearly wrong language or made up words ("blau", etc)
+${PROMPT_NO_FRAGMENT}
 
 === Suggestion field — STRICT formatting ===
 - Lowercase letters, digits, and spaces ONLY.
@@ -190,6 +191,16 @@ const json = JSON.parse(src);
 const data = loadDataFromJSON(json);
 console.log("Records:", data.length);
 
+const colors = convert(data, {
+  debug: false,
+  filter: "none",
+  minUsers: 4,
+  curated: true,
+  maxCount: MAX_COUNT,
+});
+if (REVERSE_ORDER) colors.reverse();
+
+const terms = colors.map((c) => c.name);
 // const nameMap = getNameMap(data);
 // const sorted = Array.from(nameMap.entries());
 // sorted.sort((a, b) => b[1].length - a[1].length);

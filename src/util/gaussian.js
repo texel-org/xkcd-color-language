@@ -52,6 +52,9 @@ export function buildColorCache(
   {
     minUsers = 1,
     maxUsers = Infinity,
+    minVotes = 1,
+    maxVotes = Infinity,
+    include = null,
     maxCount = 5000,
     curated = false,
     sort = "users",
@@ -68,8 +71,11 @@ export function buildColorCache(
     })
     .sort((a, b) => b.count - a.count)
     .filter((d) => {
-      const inCount = d.userVotes >= minUsers && d.userVotes <= maxUsers;
+      const inUserCount = d.userVotes >= minUsers && d.userVotes <= maxUsers;
+      if (!inUserCount) return false;
+      const inCount = d.votes >= minVotes && d.votes <= maxVotes;
       if (!inCount) return false;
+      if (include && !include.has(d.item[0])) return false;
       return curated ? !isFlagged(d.item[0]) : true;
     })
     .slice(0, maxCount)

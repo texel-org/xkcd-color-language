@@ -348,8 +348,22 @@ export const DECENT_LONG_NAMES = new Set([
 ]);
 
 export const TYPO_MAP = new Map([
+  ["browrange", "brorange"],
+  ["emerals", "emerald"],
+  ["dark aqua marine", "dark aquamarine"],
+  ["aqua marine green", "aquamarine green"],
+  ["aqua marine", "aquamarine"],
+  ["purplie", "purply"],
+  ["lavender ish", "lavenderish"],
+  ["supergreen", "super green"],
+  ["koolaid", "kool aid"],
+  ["peptobismol", "pepto bismol"],
+  ["peptobismal", "pepto bismol"],
+  ["pepto bismal", "pepto bismol"],
+  ["pinetree", "pine tree"],
   ["dunkelblau", "dark blue"],
   ["grimmace purple", "grimace purple"],
+  ["vermillion", "vermilion"],
   ["gren", "green"],
   ["mspaint", "ms paint"],
   ["robins", "robin"],
@@ -394,6 +408,7 @@ export const TYPO_MAP = new Map([
   ["chartreux", "chartreuse"],
   ["blueish", "bluish"], // ...
   ["blueishgreen", "bluish green"],
+  ["turquoiseish", "turquoisish"], // normalize
   ["purpleish", "purplish"], //
   ["purple ish", "purplish"], //
   ["purple ish blue", "purplish blue"], //
@@ -401,6 +416,7 @@ export const TYPO_MAP = new Map([
   ["purple ish gray", "purplish gray"],
   ["purple ish red", "purplish red"],
   ["purple ish brown", "purplish brown"],
+  ["magentish", "magentaish"],
   ["ocker", "ochre"],
   ["purp", "purple"],
   ["pruple", "purple"],
@@ -409,6 +425,7 @@ export const TYPO_MAP = new Map([
   ["pumpernickle", "pumpernickel"],
   ["browm", "brown"],
   ["forrest", "forest"],
+  ["matt", "matte"],
   ["yelloe", "yellow"],
   ["moroon", "maroon"],
   ["greay", "gray"],
@@ -423,6 +440,7 @@ export const TYPO_MAP = new Map([
   ["dk", "dark"],
   ["grat", "gray"],
   ["diarrhoea", "diarrhea"],
+  ["diahrea", "diarrhea"],
   ["vilet", "violet"],
   ["yeloow", "yellow"],
   ["cobolt", "cobalt"],
@@ -481,7 +499,9 @@ export const TYPO_MAP = new Map([
   ["turquis", "turquoise"],
   ["lavander", "lavender"],
   ["avacado", "avocado"],
+  ["maganta", "magenta"],
   ["purpley", "purply"], // kinda subjective?
+  ["purpely", "purply"],
   ["redish", "reddish"],
   ["flourescent", "fluorescent"],
   ["muave", "mauve"],
@@ -520,7 +540,7 @@ export const TYPO_MAP = new Map([
   ["bleu", "blue"],
   ["fushcia", "fuchsia"],
   ["fuscia", "fuchsia"],
-  ["aqua marine", "aquamarine"],
+  ["thalo", "phthalo"],
   ["sea foam green", "seafoam green"],
   ["kelley green", "kelly green"],
   ["kahki", "khaki"],
@@ -872,6 +892,7 @@ export const SKIP_TERMS = new Set([
   "purpur",
   "homosexual",
   "faggy",
+  "homosexuality",
   "fagy",
   "herpes",
   "adf",
@@ -1074,23 +1095,31 @@ export const SKIP_TERMS = new Set([
 // whereas these have to be an exact match to the name
 export const SKIP_LABELS = new Set([
   // filter out low quality responses
-  "girly", // skip these, let the 'girly pink' vs 'manly blue' through though
-  "manly", // as above
+  // "girly", // included in curated list
+  // "manly", // as above
   "gray or gray", // this happens when somebody says "grey or gray" and we normalize to one
   "who knows",
   "graygreenblue",
   "mediumseagreen",
   "sad", // too ambiguous?
   "nice",
+  "olive drap", // typo? olive drab?
   "pale",
   "sfg",
+  "gurple",
+  "smaragd", // emerald in other languages
   "ugly",
   "disgusting",
+  "rurple",
   "horrible",
   "jason",
+  "green oscuro", // wrong lang
   "serious",
   "awesome",
+  "not orange",
+  "brains",
   "timmy",
+  "boy",
   "nathan",
   "andrew",
   "betsy",
@@ -1400,6 +1429,11 @@ export const NON_CURSES = [
   "nude",
   "bloody",
 ];
+
+// // "homosexual purple", // todo: this should be curated out already
+// // "faggy purple", // todo: already should be curated out, bug?
+// // "homosexual pink", // todo: bug?
+// // "homosexual", // todo: bug?
 
 export const EXTRA_CURSES = [
   // actual curses

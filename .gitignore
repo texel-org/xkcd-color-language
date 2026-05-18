@@ -4,3 +4,5 @@ node_modules
 .DS_Store
 data/xkcd/
 !data/xkcd/.gitkeep
+.env
+!.env.example

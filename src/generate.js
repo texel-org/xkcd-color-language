@@ -46,10 +46,9 @@ console.log("Total Records:", data.length);
 const colors = convert(data, {
   debug: true,
   filter: "mad",
-  minUsers: 5,
-  curated: true,
-  // maxUsers: 6,
-  maxCount: 10000,
+  minUsers: 4,
+  curated: false,
+  maxCount: 15000,
 });
 const maxLenDigits = String(colors.length).length;
 console.log(colors.length);

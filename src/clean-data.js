@@ -257,7 +257,10 @@ function loadAnswers(opts = {}) {
       return false;
     }
 
-    name = name.replaceAll("grey", "gray");
+    // unless it's the brand name grey poupon, replace with gray
+    if (!name.includes("poupon")) {
+      name = name.replaceAll("grey", "gray");
+    }
 
     // special case: normalise "gray ish blue" and "grayish blue"
     // we have some typo stuff to handle "blueish" vs "bluish"
@@ -304,6 +307,10 @@ function loadAnswers(opts = {}) {
     if (SKIP_TERMS.has(name)) return false;
     if (tokens.some((t) => SKIP_TERMS.has(t))) {
       return false;
+    }
+
+    if (name.includes("faggy") || name.includes("homosexual")) {
+      console.log("HOW?!??!", name);
     }
 
     if (tokens.includes("i")) {
