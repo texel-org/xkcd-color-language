@@ -1824,7 +1824,6 @@ export const LABEL_SKIP = new Set([
   "blue berry", // low quality responses in there
   "space",
   "jet",
-  "",
 ]);
 
 // "ceylon", // expected more?
