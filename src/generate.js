@@ -79,9 +79,9 @@ for (let i = 0; i < colors.length; i++) {
     filteredColors, // list of { oklab } colors
   } = colors[i];
 
-  const show =
-    TOKEN_ALLOW.has(name) || name.split(" ").some((t) => TOKEN_ALLOW.has(t));
-  if (!show) continue;
+  // const show =
+  //   TOKEN_ALLOW.has(name) || name.split(" ").some((t) => TOKEN_ALLOW.has(t));
+  // if (!show) continue;
   console.log(
     `${String(i).padStart(maxLenDigits, "0")}: ${name} (votes:${votes} userVotes:${userVotes})`,
   );

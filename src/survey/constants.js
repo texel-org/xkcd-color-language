@@ -365,7 +365,9 @@ export const DECENT_LONG_NAMES = new Set([
 export const TYPO_MAP = new Map([
   ["browrange", "brorange"],
   ["emerals", "emerald"],
+  ["hoovooloo", "hooloovoo"],
   ["palish", "paleish"],
+  ["tarheel", "tar heel"],
   ["trex green", "t rex green"],
   ["hooker green", "hookers green"],
   ["dark aqua marine", "dark aquamarine"],
@@ -1752,6 +1754,7 @@ export const JUNK_VOWELLESS_OK = new Set([
 export const JUNK_TOKEN_ALLOWLIST = new Set([
   "lightsteelblue",
   "hooloovoo",
+  "hoovooloo",
   "darkslateblue",
   "lightbulbs",
   "unsettlingly",

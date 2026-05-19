@@ -948,7 +948,6 @@ export const LABEL_SKIP = new Set([
   "medium rare",
   "rosetta",
   "link",
-  "hooloovoo",
   "next",
   "kyle",
   "gol",

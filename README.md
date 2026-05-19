@@ -80,6 +80,16 @@ SELECT * FROM answers;
 
 You should now have `users.csv` and `answers.csv`.
 
+## Gotchas
+
+If you're using the data for anything serious, you should take note of a few gotchas and quirks:
+
+- Even the 'uncurated' data is still heavily curated (by me), and opinionated in what terms are allowed and what terms have been normalised, renamed, or merged.
+- Some vulgar colours have been removed even though they were voted highly (like "shit brown")
+- There are some artefacts of the data cleaning, such as apostrophes and punctuation being removed, multiple colors being normalised to a single label, etc. Labels like "red-blue" and "red/blue" might be perceived by a reader as distinct colours, but punctuation has been replaced with spaces so the two terms are merged into the same "red blue" label.
+- Similarly, all the labels are stored as lowercase, but some colors are likely better displayed to end-user with specific casing, e.g. "OD Green", "HR Block Green", "UPS Brown", "Hooloovoo"
+- Accents have been mostly folded to non-accented characters (café normalised to cafe), except for "rosé" and "tenné" terms
+
 ## Interesting Colors
 
 TODO: expand
