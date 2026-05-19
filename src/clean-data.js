@@ -28,6 +28,8 @@ const SPAM_TOKEN_LENGTH = 8;
 // const typoMap = new Map(TYPO_MAP);
 // const skip = new Set(SKIP_LABELS);
 
+const PRESERVE_ACCENTED = ["rosé", "tenné"];
+
 const curses = (await readFile("data/curses_en.txt", "utf8"))
   .split("\n")
   .map((n) => n.toLowerCase().trim())
@@ -214,7 +216,17 @@ function loadAnswers(opts = {}) {
 
     const originalLabel = name;
     name = name.toLowerCase();
-    name = name.normalize("NFKC").trim();
+
+    // special handling for rosé which we try to preserve
+    name = name.replaceAll("rosè", "rosé");
+    const hasPreserved = PRESERVE_ACCENTED.some((w) => name.includes(w));
+
+    // decompose and strip combining marks
+    name = name.normalize("NFKD");
+    if (!hasPreserved) {
+      name = name.replace(/\p{Diacritic}/gu, "");
+    }
+    name = name.trim();
 
     if (
       name.startsWith("#") ||
@@ -243,9 +255,11 @@ function loadAnswers(opts = {}) {
       .replace(/[\/_,]+/g, "-")
       .replace(/\s+/g, " ")
       .replace(/\s*-\s*/g, "-")
-      .replace(/[^a-z0-9 -]/g, "")
       .replace(/[\-]/g, " ")
       .trim();
+
+    // Allow combining marks through the filter, then recompose
+    name = name.replace(/[^a-z0-9\p{M} -]/gu, "").normalize("NFC");
 
     if (name.length <= 2) {
       freqs.short.add(name);
@@ -255,11 +269,6 @@ function loadAnswers(opts = {}) {
       freqs.nonAlpha.add(name);
       markSpam(userId, name);
       return false;
-    }
-
-    // unless it's the brand name grey poupon, replace with gray
-    if (!name.includes("poupon")) {
-      name = name.replaceAll("grey", "gray");
     }
 
     // special case: normalise "gray ish blue" and "grayish blue"
@@ -308,11 +317,6 @@ function loadAnswers(opts = {}) {
     if (tokens.some((t) => SKIP_TERMS.has(t))) {
       return false;
     }
-
-    if (name.includes("faggy") || name.includes("homosexual")) {
-      console.log("HOW?!??!", name);
-    }
-
     if (tokens.includes("i")) {
       // i quit, i dunno, etc
       freqs.i.add(name);
@@ -373,12 +377,6 @@ function loadAnswers(opts = {}) {
     if (SKIP_TERMS.has(name)) return false;
     if (SKIP_LABELS.has(name)) return false;
 
-    // this is too aggressive; some "blue or purple" are quite good names
-    // if (tokens.includes("or")) {
-    //   // "violet or indigo" type of responses
-    //   return false;
-    // }
-
     if (SWAP_MAP.has(name)) {
       name = SWAP_MAP.get(name);
     }
@@ -386,6 +384,11 @@ function loadAnswers(opts = {}) {
     if (isJunkLabel(name)) {
       freqs.junk.add(name);
       return false;
+    }
+
+    // the only exception to gray is the brand name 'Grey Poupon'
+    if (name == "gray poupon") {
+      name = "grey poupon";
     }
 
     const row = [userId, rgb, name];

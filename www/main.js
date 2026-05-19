@@ -15,6 +15,7 @@ import { findForeground } from "../src/util/data";
 import { PCA } from "../src/util/pca";
 import dataUrl from "../data/xkcd/answers.compact.json?url";
 import * as IDB from "idb-keyval";
+import { TOKEN_ALLOW } from "../src/survey/constants";
 
 const IDB_PATH = "xkcd-data-json";
 
@@ -711,6 +712,12 @@ async function main() {
     maxCount: MAX_TERM_COUNT,
   });
   console.log("Total Colors:", colorCache.length);
+  // colorCache = colorCache.filter((c) => {
+  //   const { name } = c;
+  //   const show =
+  //     TOKEN_ALLOW.has(name) || name.split(" ").some((t) => TOKEN_ALLOW.has(t));
+  //   return show;
+  // });
   // colorCache = colorCache.slice(-2500);
   // colorCache.reverse();
   // colorCache = colorCache.slice(0, 5000);

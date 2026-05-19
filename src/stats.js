@@ -18,10 +18,15 @@ import {
 import { convert, deltaEOK2 } from "./util/gaussian.js";
 import { createReadStream, writeFileSync } from "node:fs";
 import csv from "csv-parser";
-import SpellChecker from "fast-spell";
+// import SpellChecker from "fast-spell";
+import * as Color from "@texel/color";
 
 const src = await readFile("data/xkcd/answers.compact.json", "utf8");
 const rows = JSON.parse(src);
+
+// Fraction of votes that are "repeats" by users who already voted.
+// 0 = everyone voted exactly once; → 1 = a small clique dominates.
+const repeatVoteFraction = (e) => (e.votes > 0 ? 1 - e.userVotes / e.votes : 0);
 
 const dist3sq = (a, b) =>
   (a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2 + (a[2] - b[2]) ** 2;
@@ -57,33 +62,72 @@ function eigvals3sym(M) {
   return [e1, e2, e3].sort((a, b) => b - a);
 }
 
-// OKLab -> sRGB hex (for console-printing). Clamps out-of-gamut.
-function oklabToHex([L, a, b]) {
-  const l_ = L + 0.3963377774 * a + 0.2158037573 * b;
-  const m_ = L - 0.1055613458 * a - 0.0638541728 * b;
-  const s_ = L - 0.0894841775 * a - 1.291485548 * b;
-  const l = l_ ** 3,
-    m = m_ ** 3,
-    s = s_ ** 3;
-  const lin = [
-    4.0767416621 * l - 3.3077115913 * m + 0.2309699292 * s,
-    -1.2684380046 * l + 2.6097574011 * m - 0.3413193965 * s,
-    -0.0041960863 * l - 0.7034186147 * m + 1.707614701 * s,
-  ];
-  const g = (c) => {
-    c = Math.max(0, Math.min(1, c));
-    return c <= 0.0031308 ? 12.92 * c : 1.055 * Math.pow(c, 1 / 2.4) - 0.055;
-  };
-  return (
-    "#" +
-    lin
-      .map((c) =>
-        Math.round(g(c) * 255)
-          .toString(16)
-          .padStart(2, "0"),
-      )
-      .join("")
+// Long-tail score: ratio of the 90th-percentile distance-from-mean to the
+// median distance-from-mean. High = a tight core with a minority of points
+// reaching far away. Distinct from bimodality (which is balanced) and from
+// broad spread (which is roughly symmetric).
+//   Tight cluster:    p90/p50 ≈ 1.5
+//   Symmetric spread: p90/p50 ≈ 2
+//   Long tail:        p90/p50 ≈ 4+
+function longTail(e) {
+  if (e.colors.length < 10) return 0;
+  const dists = e.colors.map((c) => dist3(c.oklab, e.mean));
+  dists.sort((a, b) => a - b);
+  const n = dists.length;
+  const median = dists[n >> 1];
+  const p90 = dists[Math.min(n - 1, Math.floor(n * 0.9))];
+  return median < 1e-9 ? 0 : p90 / median;
+}
+
+// Centroid of the tail-end (points beyond the 75th-percentile distance from
+// the mean). Useful for showing *what* the minority interpretation looks like.
+function tailCentroid(e) {
+  if (e.colors.length < 10) return null;
+  const wd = e.colors.map((c) => ({ p: c.oklab, d: dist3(c.oklab, e.mean) }));
+  wd.sort((a, b) => a.d - b.d);
+  const tail = wd.slice(Math.floor(wd.length * 0.75));
+  if (!tail.length) return null;
+  const s = [0, 0, 0];
+  for (const { p } of tail) {
+    s[0] += p[0];
+    s[1] += p[1];
+    s[2] += p[2];
+  }
+  return [s[0] / tail.length, s[1] / tail.length, s[2] / tail.length];
+}
+
+function oklabToSRGB(oklab) {
+  return Color.gamutMapOKLCH(
+    Color.convert(oklab, Color.OKLab, Color.OKLCH),
+    Color.sRGBGamut,
+    Color.sRGB,
+    undefined,
+    Color.MapToL,
   );
+}
+
+function oklabToRawLinearSRGB(oklab) {
+  return Color.convert(oklab, Color.OKLab, Color.sRGBLinear);
+}
+
+// Signed distance from mean to the sRGB cube boundary (in linear RGB).
+//   > 0 : inside, distance to nearest face
+//   = 0 : on the boundary
+//   < 0 : outside the gamut (will clip on display)
+// Sort ascending — smaller = more "extreme" colour.
+const gamutEdgeSignedDistance = (e) => {
+  const [r, g, b] = oklabToRawLinearSRGB(e.mean);
+  return Math.min(r, g, b, 1 - r, 1 - g, 1 - b);
+};
+
+// Volume of the cov ellipsoid (sqrt of the generalized variance).
+// Catches broadly-spread terms even when their RMS is moderate, because
+// anisotropic shapes can have high trace but small det, and vice versa.
+const ellipsoidVolume = (e) => Math.sqrt(Math.max(0, det3(e.cov)));
+
+// OKLab -> sRGB hex (for console-printing). Clamps out-of-gamut.
+function oklabToHex(oklab) {
+  return Color.RGBToHex(oklabToSRGB(oklab));
 }
 
 // ----- per-term statistics ---------------------------------------------------
@@ -120,6 +164,48 @@ const chromaOfMean = (e) => Math.hypot(e.mean[1], e.mean[2]);
 // Standard error of the mean — how well-localised the centroid is.
 const meanStdError = (e) => spread(e) / Math.sqrt(Math.max(1, e.colors.length));
 
+// Spread of chroma values within a term. High = users agree on hue/lightness
+// roughly, but disagree on how *saturated* the color should be (e.g. some
+// pick a muted version, some pick a vivid one).
+function chromaDispersion(e) {
+  let s = 0,
+    s2 = 0,
+    n = 0;
+  for (const c of e.colors) {
+    const ch = Math.hypot(c.oklab[1], c.oklab[2]);
+    s += ch;
+    s2 += ch * ch;
+    n++;
+  }
+  if (n < 2) return 0;
+  const mean = s / n;
+  return Math.sqrt(Math.max(0, s2 / n - mean * mean));
+}
+
+// Like hueDispersion, but scaled by the term's typical chromaticity.
+// Suppresses muted/gray crayons; surfaces vivid ones with many hues.
+function vividHueDispersion(e) {
+  let sx = 0,
+    sy = 0,
+    w = 0,
+    sumCh = 0,
+    n = 0;
+  for (const c of e.colors) {
+    const [, a, b] = c.oklab;
+    const ch = Math.hypot(a, b);
+    n++;
+    sumCh += ch;
+    if (ch < 1e-6) continue;
+    sx += a;
+    sy += b;
+    w += ch;
+  }
+  if (w < 1e-6 || n === 0) return 0;
+  const dispersion = 1 - Math.hypot(sx, sy) / w;
+  const meanChroma = sumCh / n;
+  return dispersion * meanChroma;
+}
+
 // Chroma-weighted circular variance of hues. High => users agree on lightness
 // and saturation, but disagree on *which hue* (classic "crayon"-shaped term).
 function hueDispersion(e) {
@@ -135,6 +221,62 @@ function hueDispersion(e) {
     w += ch;
   }
   return w < 1e-6 ? 0 : 1 - Math.hypot(sx, sy) / w;
+}
+
+// effIndependentVoters = userVotes² / votes
+// If everyone votes exactly once: equals userVotes
+// If one user voted N times: equals 1/N
+// Rewards both popularity AND independence. High = broad consensus across
+// many people, not a few users hammering the button.
+const effIndependentVoters = (e) =>
+  e.votes > 0 ? (e.userVotes * e.userVotes) / e.votes : 0;
+
+function makeHistogram(list, { bins, minColors, minChroma = 0, kind, weight }) {
+  // kind: "hue" | "L"
+  // weight: "userVotes" | "votes" | "terms" | fn(e) -> number
+  const counts = new Array(bins).fill(0);
+  const w =
+    typeof weight === "function"
+      ? weight
+      : weight === "userVotes"
+        ? (e) => e.userVotes
+        : weight === "votes"
+          ? (e) => e.votes
+          : (e) => 1;
+  for (const e of list) {
+    if (e.colors.length < minColors) continue;
+    let bin;
+    if (kind === "hue") {
+      const [, a, b] = e.mean;
+      if (Math.hypot(a, b) < minChroma) continue; // skip near-greys
+      let h = Math.atan2(b, a);
+      if (h < 0) h += 2 * Math.PI;
+      bin = Math.min(bins - 1, Math.floor((h / (2 * Math.PI)) * bins));
+    } else {
+      // "L"
+      bin = Math.min(bins - 1, Math.max(0, Math.floor(e.mean[0] * bins)));
+    }
+    counts[bin] += w(e);
+  }
+  return counts;
+}
+
+function printBars(label, counts, labelFor) {
+  console.log(`\n— ${label} —`);
+  const max = Math.max(1, ...counts);
+  const total = counts.reduce((a, b) => a + b, 0);
+  const ranked = counts.map((c, i) => ({ c, i })).sort((a, b) => b.c - a.c);
+  const topI = ranked[0]?.i,
+    botI = ranked[ranked.length - 1]?.i;
+  for (let i = 0; i < counts.length; i++) {
+    const n = counts[i];
+    const bar = Math.round((n / max) * 40);
+    const pct = total ? ((100 * n) / total).toFixed(1).padStart(5) : "  0.0";
+    const tag = i === topI ? " ← most" : i === botI ? " ← least" : "";
+    console.log(
+      `  ${labelFor(i).padEnd(16)}  ${"█".repeat(bar).padEnd(40)}  ${String(n).padStart(8)}  ${pct}%${tag}`,
+    );
+  }
 }
 
 // ----- 2-means + bimodality --------------------------------------------------
@@ -293,22 +435,40 @@ function nearestNeighbours(data) {
 
 // ----- top-K + reporting -----------------------------------------------------
 
-function topK(data, scoreFn, { k = 100, minColors = 30, asc = false } = {}) {
+// IMDb-style shrinkage to the median of the raw scores:
+//   shrunk = (n*raw + m*median) / (n + m)
+// With m=10: n=5 keeps 33% of raw + 67% of median; n=50 ≈ 83%; n=500 ≈ 98%.
+// Works for every metric and both sort directions — extremes regress toward
+// typical, so low-n entries can't dominate either end of the ranking.
+function topK(
+  data,
+  scoreFn,
+  {
+    k = 100,
+    minColors = 30,
+    asc = false,
+    weighted = true,
+    priorWeight = 10,
+  } = {},
+) {
   const scored = data
     .filter((d) => d.colors.length >= minColors)
-    .map((d) => ({ d, s: scoreFn(d) }))
-    .filter((x) => Number.isFinite(x.s));
+    .map((d) => ({ d, raw: scoreFn(d), n: d.colors.length }))
+    .filter((x) => Number.isFinite(x.raw));
+
+  if (weighted && scored.length) {
+    const sorted = scored.map((x) => x.raw).sort((a, b) => a - b);
+    const median = sorted[sorted.length >> 1];
+    for (const x of scored) {
+      x.s = (x.n * x.raw + priorWeight * median) / (x.n + priorWeight);
+    }
+  } else {
+    for (const x of scored) x.s = x.raw;
+  }
+
   scored.sort((x, y) => (asc ? x.s - y.s : y.s - x.s));
   return scored.slice(0, k);
 }
-
-// function fmt(d, s) {
-//   const num = typeof s === "number" ? s.toFixed(4) : String(s);
-//   return (
-//     `${num.padStart(8)}  ${oklabToHex(d.mean)}  ` +
-//     `${d.name.padEnd(34)}  n=${String(d.colors.length).padStart(5)}  votes=${d.votes}`
-//   );
-// }
 
 function report(data, K = 20, minColors = 30) {
   const opts = { k: K, minColors };
@@ -356,7 +516,10 @@ function section(title, rows) {
   for (const line of rows) console.log(line);
 }
 
-export function runAll(list, { K = 25, minColors = 2 } = {}) {
+export function runAll(
+  list,
+  { K = 50, minColors = 2, weighted = false, priorWeight = 10 } = {},
+) {
   // ---- summary ------------------------------------------------------------
   const totalColors = list.reduce((s, d) => s + d.colors.length, 0);
   const totalVotes = list.reduce((s, d) => s + (d.votes || 0), 0);
@@ -370,8 +533,12 @@ export function runAll(list, { K = 25, minColors = 2 } = {}) {
   console.log(`colors:   ${totalColors}`);
   console.log(`votes:    ${totalVotes}`);
   console.log(`top-K:    ${K}`);
+  console.log(
+    `weighted: ${weighted ? `yes (priorWeight=${priorWeight})` : "no"}`,
+  );
 
-  const tk = (fn, asc) => topK(list, fn, { k: K, minColors, asc });
+  const tk = (fn, asc) =>
+    topK(list, fn, { k: K, minColors, asc, weighted, priorWeight });
 
   // ---- spread / agreement -------------------------------------------------
   section(
@@ -389,12 +556,44 @@ export function runAll(list, { K = 25, minColors = 2 } = {}) {
     tk(meanStdError, true).map(({ d, s }) => fmt(d, s)),
   );
 
+  section(
+    "Long-tail (mostly agreed, but a minority of dissenters)",
+    tk(longTail, false).map(({ d, s }) => {
+      const tc = tailCentroid(d);
+      return fmt(
+        d,
+        s,
+        `core=${oklabToHex(d.mean)} tail≈${tc ? oklabToHex(tc) : "—"}`,
+      );
+    }),
+  );
+
   // ---- shape of disagreement ---------------------------------------------
   section(
     'Hue-divisive (many hues, ~constant lightness — "crayon"-shaped)',
     tk(hueDispersion, false).map(({ d, s }) => {
       const ax = spreadAxes(d);
       return fmt(d, s, `L=${ax.L.toFixed(3)} ab=${ax.ab.toFixed(3)}`);
+    }),
+  );
+
+  section(
+    "Hue-divisive AND vivid (saturated crayon-shaped — many bright hues)",
+    tk(vividHueDispersion, false).map(({ d, s }) => {
+      const ax = spreadAxes(d);
+      return fmt(
+        d,
+        s,
+        `hueDisp=${hueDispersion(d).toFixed(3)} meanC=${(s / Math.max(1e-9, hueDispersion(d))).toFixed(3)}`,
+      );
+    }),
+  );
+
+  section(
+    "Chroma-divisive (users disagree on saturation — muted vs vivid same-hue)",
+    tk(chromaDispersion, false).map(({ d, s }) => {
+      const hd = hueDispersion(d);
+      return fmt(d, s, `hueDisp=${hd.toFixed(3)}`);
     }),
   );
 
@@ -430,29 +629,41 @@ export function runAll(list, { K = 25, minColors = 2 } = {}) {
   );
 
   // ---- bimodality (cache results so we can print sub-details) -------------
-  const bi = new Map();
+  const bi = [];
   for (const d of list) {
-    if (d.colors.length >= minColors) bi.set(d, bimodality(d));
+    if (d.colors.length >= minColors) {
+      bi.push({ d, b: bimodality(d), n: d.colors.length });
+    }
   }
-  const biSorted = [...bi.entries()]
-    .map(([d, b]) => ({ d, b }))
-    .sort((a, b) => b.b.score - a.b.score)
-    .slice(0, K);
+
+  if (weighted && bi.length) {
+    const sorted = bi.map((x) => x.b.score).sort((a, b) => a - b);
+    const median = sorted[sorted.length >> 1];
+    for (const x of bi) {
+      x.s = (x.n * x.b.score + priorWeight * median) / (x.n + priorWeight);
+    }
+  } else {
+    for (const x of bi) x.s = x.b.score;
+  }
+
+  const biSorted = bi.sort((a, b) => b.s - a.s).slice(0, K);
 
   section(
     "Most bimodal (two distinct lobes)",
-    biSorted.map(({ d, b }) => {
+    biSorted.map(({ d, b, s }) => {
       const c1 = oklabToHex(b.c1),
         c2 = oklabToHex(b.c2);
       return fmt(
         d,
-        b.score,
+        s,
         `gap=${b.gap.toFixed(3)} bal=${b.balance.toFixed(2)} lobes=${c1}/${c2} (${b.n1}/${b.n2})`,
       );
     }),
   );
 
   // ---- neighbour distances (O(N²) over means; ~50M ops for 10K terms) -----
+  // (Not shrinkage-weighted: this asks "is term X's mean close to term Y's
+  // mean?", which doesn't depend on each term's sample size.)
   const nn = nearestNeighbours(eligible);
   const withNN = eligible
     .map((d) => ({ d, nn: nn.get(d.name) }))
@@ -475,6 +686,8 @@ export function runAll(list, { K = 25, minColors = 2 } = {}) {
   );
 
   // ---- engagement metrics -------------------------------------------------
+  // (Not shrinkage-weighted: votes and userVotes are direct counts, not
+  // noisy estimates of an underlying parameter.)
   section(
     "Highest vote conviction (votes per unique user)",
     tk((e) => e.votes / Math.max(1, e.userVotes), false).map(({ d, s }) =>
@@ -487,13 +700,153 @@ export function runAll(list, { K = 25, minColors = 2 } = {}) {
     tk((e) => e.userVotes, false).map(({ d, s }) => fmt(d, s)),
   );
 
+  section(
+    "Broad consensus (many independent voters, few repeats)",
+    tk(effIndependentVoters, false).map(({ d, s }) =>
+      fmt(
+        d,
+        s,
+        `users=${d.userVotes} votes=${d.votes} v/u=${(d.votes / Math.max(1, d.userVotes)).toFixed(2)}`,
+      ),
+    ),
+  );
+
+  section(
+    "Repeat-heavy (a clique hammering the same name)",
+    tk(repeatVoteFraction, false).map(({ d, s }) =>
+      fmt(d, s, `users=${d.userVotes} votes=${d.votes}`),
+    ),
+  );
+
+  console.log("\n===== more stats ==== ");
+
+  // ---- L and C extremes (with agreement) ----------------------------------
+  section(
+    "Lightest (high L with agreement): L − spread",
+    tk((e) => e.mean[0] - spread(e), false).map(({ d, s }) =>
+      fmt(d, s, `L=${d.mean[0].toFixed(3)} spread=${spread(d).toFixed(3)}`),
+    ),
+  );
+  section(
+    "Darkest (low L with agreement): L + spread",
+    tk((e) => e.mean[0] + spread(e), true).map(({ d, s }) =>
+      fmt(d, s, `L=${d.mean[0].toFixed(3)} spread=${spread(d).toFixed(3)}`),
+    ),
+  );
+  section(
+    "Most chromatic (high chroma with agreement): C − spread",
+    tk((e) => chromaOfMean(e) - spread(e), false).map(({ d, s }) =>
+      fmt(
+        d,
+        s,
+        `C=${chromaOfMean(d).toFixed(3)} spread=${spread(d).toFixed(3)}`,
+      ),
+    ),
+  );
+  section(
+    "Most achromatic (low chroma with agreement): C + spread",
+    tk((e) => chromaOfMean(e) + spread(e), true).map(({ d, s }) =>
+      fmt(
+        d,
+        s,
+        `C=${chromaOfMean(d).toFixed(3)} spread=${spread(d).toFixed(3)}`,
+      ),
+    ),
+  );
+
+  // ---- Gamut edge --------------------------------------------------------
+  section(
+    "Gamut-edge terms (mean near or outside the sRGB cube)",
+    tk(gamutEdgeSignedDistance, true).map(({ d, s }) => {
+      const [r, g, b] = oklabToRawLinearSRGB(d.mean);
+      const inside = r >= 0 && g >= 0 && b >= 0 && r <= 1 && g <= 1 && b <= 1;
+      return fmt(
+        d,
+        s,
+        `${inside ? "inside" : " OUT  "} lin=(${r.toFixed(2)},${g.toFixed(2)},${b.toFixed(2)})`,
+      );
+    }),
+  );
+
+  // ---- Ellipsoid volume --------------------------------------------------
+  section(
+    "Largest cov ellipsoid volume (broad 3D coverage)",
+    tk(ellipsoidVolume, false).map(({ d, s }) => {
+      const ax = spreadAxes(d);
+      return fmt(d, s, `L=${ax.L.toFixed(3)} ab=${ax.ab.toFixed(3)}`);
+    }),
+  );
+  section(
+    "Smallest cov ellipsoid volume (tightest 3D agreement)",
+    tk(ellipsoidVolume, true).map(({ d, s }) => fmt(d, s)),
+  );
+
+  console.log("==== histo ====");
+
+  // ---- whole-dataset histograms -------------------------------------------
+  const HUE_BINS = 24;
+  const L_BINS = 20;
+
+  const hueLabel = (i) => {
+    const deg = Math.round(((i + 0.5) / HUE_BINS) * 360);
+    const h = ((i + 0.5) / HUE_BINS) * 2 * Math.PI;
+    return `${String(deg).padStart(3)}° ${oklabToHex([0.65, 0.15 * Math.cos(h), 0.15 * Math.sin(h)])}`;
+  };
+  const lLabel = (i) => {
+    const Lmid = (i + 0.5) / L_BINS;
+    return `L=${Lmid.toFixed(2)} ${oklabToHex([Lmid, 0, 0])}`;
+  };
+
+  printBars(
+    `Hue histogram — weighted by userVotes (${HUE_BINS} bins of 15°)`,
+    makeHistogram(list, {
+      bins: HUE_BINS,
+      minColors,
+      kind: "hue",
+      minChroma: 0.02,
+      weight: "userVotes",
+    }),
+    hueLabel,
+  );
+  printBars(
+    `Hue histogram — one count per term (where in OKLab the *names* live)`,
+    makeHistogram(list, {
+      bins: HUE_BINS,
+      minColors,
+      kind: "hue",
+      minChroma: 0.02,
+      weight: "terms",
+    }),
+    hueLabel,
+  );
+  printBars(
+    `Lightness histogram — weighted by userVotes (${L_BINS} bins)`,
+    makeHistogram(list, {
+      bins: L_BINS,
+      minColors,
+      kind: "L",
+      weight: "userVotes",
+    }),
+    lLabel,
+  );
+  printBars(
+    `Lightness histogram — one count per term`,
+    makeHistogram(list, {
+      bins: L_BINS,
+      minColors,
+      kind: "L",
+      weight: "terms",
+    }),
+    lLabel,
+  );
+
   console.log(
     "\n=== done =====================================================\n",
   );
 }
 
 let colors = convert(loadDataFromJSON(rows), {
-  minUsers: 20,
+  minUsers: 5,
   maxCount: 15000,
   curated: false,
   sort: "users",

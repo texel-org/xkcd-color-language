@@ -2,6 +2,8 @@ import { readFile, writeFile } from "node:fs/promises";
 import * as path from "node:path";
 import { getNameMap, getUserMap, loadDataFromJSON } from "./util/json.js";
 import { convert, deltaEOK2 } from "./util/gaussian.js";
+import { isFlagged } from "./survey/constants-curate.js";
+import { TOKEN_ALLOW } from "./survey/constants.js";
 
 const src = await readFile("data/xkcd/answers.compact.json", "utf8");
 const json = JSON.parse(src);
@@ -50,6 +52,20 @@ const colors = convert(data, {
   curated: false,
   maxCount: 15000,
 });
+
+// console.log("FLAGGED---->");
+// const flags = new Set();
+// for (let a of colors) {
+//   if (isFlagged(a.name)) {
+//     console.log(a.name);
+//     flags.add(a.name);
+//   }
+// }
+
+// console.log();
+// console.log(flags.size);
+// console.log(JSON.stringify([...flags]));
+
 const maxLenDigits = String(colors.length).length;
 console.log(colors.length);
 for (let i = 0; i < colors.length; i++) {
@@ -62,16 +78,13 @@ for (let i = 0; i < colors.length; i++) {
     cov, // covariance matrix
     filteredColors, // list of { oklab } colors
   } = colors[i];
+
+  const show =
+    TOKEN_ALLOW.has(name) || name.split(" ").some((t) => TOKEN_ALLOW.has(t));
+  if (!show) continue;
   console.log(
     `${String(i).padStart(maxLenDigits, "0")}: ${name} (votes:${votes} userVotes:${userVotes})`,
   );
-
-  // list of oklabs associated with this label in case its useful
-  // console.log(filteredColors[0].oklab);
-
-  // example delta computation between two OKLabs
-  // const threshold = 0.3; // a good metric for "far away"
-  // const deltaE = deltaEOK2([L0,a0,b0], [L1,a1,b1])
 }
 
 // const undecided = findUndecidedColors(colors, {

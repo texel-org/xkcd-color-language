@@ -90,15 +90,30 @@ export const SPAM_USERS = new Set([
 export const DECENT_LONG_NAMES = new Set([
   // ultra long
   "light blue with a hint of green",
+  "some kind of purple",
+  "blue with some purple",
+  "another shade of purple",
+  "slightly darker light green",
+  "very very light green",
   "light green with a hint of blue",
   "somewhere between blue and purple",
+  "light robins egg blue",
+  "very very light blue",
+  "green with some yellow",
   "dark blue with a hint of purple",
   "light green with a hint of yellow",
   "teenage mutant ninja turtle green",
   "something between blue and purple",
+  "kermit the frog green",
+  "some kind of blue",
+  "yet another green",
+  "yet another blue",
+  "yet another purple",
+  "barney the dinosaur purple",
   // others with >= 4 tokens
   "dark robin egg blue",
   "blue screen of death",
+  "light sea foam green",
   "bright sea foam green",
   "bright robin egg blue",
   // these appear >= 4 times
@@ -350,6 +365,9 @@ export const DECENT_LONG_NAMES = new Set([
 export const TYPO_MAP = new Map([
   ["browrange", "brorange"],
   ["emerals", "emerald"],
+  ["palish", "paleish"],
+  ["trex green", "t rex green"],
+  ["hooker green", "hookers green"],
   ["dark aqua marine", "dark aquamarine"],
   ["aqua marine green", "aquamarine green"],
   ["aqua marine", "aquamarine"],
@@ -410,6 +428,7 @@ export const TYPO_MAP = new Map([
   ["blueishgreen", "bluish green"],
   ["turquoiseish", "turquoisish"], // normalize
   ["purpleish", "purplish"], //
+  ["greenscreen", "green screen"],
   ["purple ish", "purplish"], //
   ["purple ish blue", "purplish blue"], //
   ["purple ish pink", "purplish pink"], //
@@ -423,6 +442,10 @@ export const TYPO_MAP = new Map([
   ["gret", "gray"],
   ["blu", "blue"],
   ["pumpernickle", "pumpernickel"],
+  ["pink dark", "dark pink"], // normalize a few
+  ["green pale", "pale green"],
+  ["yellow dark", "dark yellow"],
+  ["red dark", "dark red"],
   ["browm", "brown"],
   ["forrest", "forest"],
   ["matt", "matte"],
@@ -909,7 +932,6 @@ export const SKIP_TERMS = new Set([
   "paars", // dutch for purple
   "lilla",
   "gleen",
-  "john",
   "grayn",
   "viole",
   "dfg",
@@ -958,7 +980,6 @@ export const SKIP_TERMS = new Set([
   "dfs",
   "dsa",
   "brun",
-  "some",
   "pur",
   "pirple", // maybe pink/purple? or a spelling? just ignore since so few votes
   "blie",
@@ -978,12 +999,10 @@ export const SKIP_TERMS = new Set([
   "reen",
   "what",
   "bloo",
-  "nice",
   "hideous",
   "bown",
   "blech",
   "fds",
-  "nasty",
   "hiccup", // ??
   "awful",
   "stop",
@@ -996,7 +1015,6 @@ export const SKIP_TERMS = new Set([
   "asdf",
   "not sure",
   "bule",
-  "wall",
   "freen",
   "dave",
   "grren",
@@ -1033,7 +1051,6 @@ export const SKIP_TERMS = new Set([
   "vbn",
   "gfh",
   "now",
-  "the",
   "dfa",
   "spam",
   "fugly",
@@ -1074,7 +1091,6 @@ export const SKIP_TERMS = new Set([
   "ads",
   "sss",
   "hell",
-  "ugly",
   "ghoti",
   "fghj",
   "ert",
@@ -1089,7 +1105,10 @@ export const SKIP_TERMS = new Set([
   "gayer",
   "gay",
   "gayest",
-  "bad",
+  "another", // could leave it in too, but this is a bit survey-meta
+  "blue yet",
+  "purple yet",
+  // "bad",
 ]);
 
 // whereas these have to be an exact match to the name
@@ -1103,13 +1122,28 @@ export const SKIP_LABELS = new Set([
   "mediumseagreen",
   "sad", // too ambiguous?
   "nice",
+  "nasty",
+  "hot",
+  "the runs",
+  "the blue",
+  "the sky",
+  "the yellow wallpaper",
+  "the other blue",
+  "in the navy",
+  "the",
+  "wall",
+  "john",
+  "ugly",
   "olive drap", // typo? olive drab?
   "pale",
   "sfg",
+  "caqui", // very likely khaki as very few seem relevant to the fruit
   "gurple",
   "smaragd", // emerald in other languages
   "ugly",
+  "quartz fume", // originally was fumé, but wrong lang
   "disgusting",
+  "v light blue",
   "rurple",
   "horrible",
   "jason",
@@ -1453,7 +1487,6 @@ export const EXTRA_CURSES = [
   "pimp",
   "dicks",
   "dickcunt",
-  "hookers",
   // 'scum', // maybe its OK
   // additional curses found by post-filtering
   "feces", // should we really skip this? is it a genuine color? lol
@@ -1565,7 +1598,6 @@ export const SUSPECT_TOKENS = new Set([
   "to",
   "call",
   "even",
-  "yet",
   "oh",
   "god",
   "hurts",
@@ -1719,6 +1751,7 @@ export const JUNK_VOWELLESS_OK = new Set([
 
 export const JUNK_TOKEN_ALLOWLIST = new Set([
   "lightsteelblue",
+  "hooloovoo",
   "darkslateblue",
   "lightbulbs",
   "unsettlingly",
@@ -1746,4 +1779,37 @@ export const JUNK_TOKEN_ALLOWLIST = new Set([
   "starbucks",
   "sprng",
   "gren",
+]);
+
+// TODO:
+export const TOKEN_ALLOW = new Set([
+  "ugly green",
+  "nice",
+  "nasty",
+  "rosé",
+  "obnoxious",
+  "pee green",
+  "annoying",
+  "light sea foam green",
+  "yet",
+  "some",
+  "the",
+  "bad green",
+  "not quite red",
+  "hookers",
+  "hooker",
+  "prince",
+  "princess",
+  "wall",
+  "kermit",
+  "john deere gree",
+  "john",
+  "cake",
+  "oscar the grouch",
+  "oscar",
+  "breast cancer pink",
+  "stop light green",
+  "bad lipstick",
+  "hooloovoo",
+  "hot pants pink",
 ]);

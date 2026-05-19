@@ -1041,7 +1041,6 @@ export const LABEL_SKIP = new Set([
   "penelope",
   "simon",
   "amy",
-  "cake",
   "bla",
   "azul claro",
   "metallic",
@@ -1080,7 +1079,6 @@ export const LABEL_SKIP = new Set([
   "olives",
   "ack",
   "glass",
-  "oscar",
   "soap",
   "bez",
   "boredom",
@@ -1135,7 +1133,6 @@ export const LABEL_SKIP = new Set([
   "mush",
   "rock",
   "gerald",
-  "hot",
   "fatigue",
   "lim",
   "undefined",
@@ -1158,7 +1155,6 @@ export const LABEL_SKIP = new Set([
   "michael",
   "stephen",
   "lylic",
-  "princess",
   "randall",
   "girl",
   "vommit",
@@ -1240,7 +1236,6 @@ export const LABEL_SKIP = new Set([
   "lips",
   "blargh",
   "gah",
-  "prince",
   "amarillo",
   "larry",
   "flieder",
@@ -1824,6 +1819,22 @@ export const LABEL_SKIP = new Set([
   "blue berry", // low quality responses in there
   "space",
   "jet",
+  "not pretty",
+  "not orange",
+  "not teal",
+  "not yellow",
+  "nothing", // i like this but the results are all over the place, TBD whether to keep or not
+  "violence",
+  "tank", // most users probably meant tan
+  "annoyingly bright",
+  "despair",
+  "matte",
+  "delicious",
+  "fas",
+  "giraffe",
+  "vernil",
+  "mouse", // could be removed or kept
+  "satan", // could be removed or kept
 ]);
 
 // "ceylon", // expected more?

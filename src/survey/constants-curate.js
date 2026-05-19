@@ -1,15 +1,4 @@
-export const CURATE_MAX = 5000;
-
-export function isFlagged(token) {
-  if (LABEL_CURATE_EXACT_SKIP.has(token)) return true;
-  if (LABEL_CURATE_SKIP.has(token)) return true;
-  if (token.split(" ").some((n) => LABEL_CURATE_SKIP.has(n))) {
-    return true;
-  }
-  return false;
-}
-
-export const LABEL_CURATE_EXACT_SKIP = new Set([
+const LABEL_CURATE_EXACT_SKIP = new Set([
   "doo doo brown",
   "white man",
   "human flesh",
@@ -19,11 +8,10 @@ export const LABEL_CURATE_EXACT_SKIP = new Set([
   "throw up yellow",
   "bloody stool",
   // a few that are more opinionated skips, these represent really poorly formed colors
-  "not yellow",
   "nothing",
 ]);
 
-export const LABEL_CURATE_SKIP = new Set([
+const LABEL_CURATE_SKIP = new Set([
   "skinish",
   "bogey",
   "snotty",
@@ -54,7 +42,6 @@ export const LABEL_CURATE_SKIP = new Set([
   "scab",
   "jaundice",
   "gangrene",
-  "red",
   "snot",
   "urine",
   "mold",
@@ -72,7 +59,7 @@ export const LABEL_CURATE_SKIP = new Set([
   "congo",
   "gas",
   "toilet",
-  "nude",
+  // "nude", // allow
   "poop",
   "poo",
   "piss",
@@ -91,8 +78,41 @@ export const LABEL_CURATE_SKIP = new Set([
   "pimpin",
   "mucous",
   "barfy",
-  "meconium", // nice one though
   "puky",
   "tampon red",
+  "meconium", // maybe allow?
   // "karitane yellow", // keep or no?
 ]);
+
+// things that might have 'bad words' but are probably good colors
+const LABEL_EXACT_ALLOW_LIST = new Set([
+  "alien skin",
+  "peach skin",
+  // 'sunburned skin', // consider allowing?
+  "skin peach",
+  "sharkskin",
+  "pumpkin skin",
+  "orange skin",
+  "peach flesh",
+  "pig flesh",
+  "orange flesh",
+  "zombie flesh",
+  "elf flesh",
+  "peach skin tone",
+  "pig skin",
+  "zombie skin",
+  "tan skin",
+  "buckskin",
+  "pigskin",
+  "moleskin",
+]);
+
+export function isFlagged(name) {
+  if (LABEL_EXACT_ALLOW_LIST.has(name)) return false;
+  if (LABEL_CURATE_EXACT_SKIP.has(name)) return true;
+  if (LABEL_CURATE_SKIP.has(name)) return true;
+  if (name.split(" ").some((n) => LABEL_CURATE_SKIP.has(n))) {
+    return true;
+  }
+  return false;
+}
