@@ -9,7 +9,7 @@ import {
 } from "../util/json.js";
 import { deltaEOK2, prepareData } from "../util/data.js";
 
-const src = await readFile("data/xkcd/answers.compact.json", "utf8");
+const src = await readFile("data/xkcd/answers.clean.json", "utf8");
 const json = JSON.parse(src);
 
 const data = loadDataFromJSON(json);

@@ -13,7 +13,7 @@ import {
 } from "../src/util/gaussian";
 import { findForeground } from "../src/util/data";
 import { PCA } from "../src/util/pca";
-import dataUrl from "../data/xkcd/answers.compact.json?url";
+import dataUrl from "../data/xkcd/answers.clean.json?url";
 import * as IDB from "idb-keyval";
 import { TOKEN_ALLOW } from "../src/survey/constants";
 

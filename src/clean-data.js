@@ -21,6 +21,8 @@ import {
   loadDataFromJSON,
   Frequencies,
 } from "./util/json.js";
+import { isFlagged } from "./survey/constants-curate.js";
+import { convert } from "./util/gaussian.js";
 
 const MAX_LENGTH = 30;
 const MAX_TOKENS = 3;
@@ -391,8 +393,13 @@ function loadAnswers(opts = {}) {
       name = "grey poupon";
     }
 
-    const row = [userId, rgb, name];
-    if (name !== originalLabel) row.push(originalLabel);
+    const row = [
+      userId,
+      rgb,
+      name,
+      name === originalLabel ? null : originalLabel,
+      isFlagged(name),
+    ];
     return row;
   }
 }
@@ -469,6 +476,6 @@ if (import.meta.main || process.argv[1] === import.meta.filename) {
     debug,
   });
 
-  writeFileSync("data/xkcd/answers.compact.json", JSON.stringify(rows));
+  writeFileSync("data/xkcd/answers.clean.json", JSON.stringify(rows));
   console.log(`wrote ${rows.length} rows`);
 }

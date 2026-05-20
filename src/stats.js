@@ -21,7 +21,7 @@ import csv from "csv-parser";
 // import SpellChecker from "fast-spell";
 import * as Color from "@texel/color";
 
-const src = await readFile("data/xkcd/answers.compact.json", "utf8");
+const src = await readFile("data/xkcd/answers.clean.json", "utf8");
 const rows = JSON.parse(src);
 
 // Fraction of votes that are "repeats" by users who already voted.

@@ -364,6 +364,7 @@ export const DECENT_LONG_NAMES = new Set([
 
 export const TYPO_MAP = new Map([
   ["browrange", "brorange"],
+  ["gray pupon", "gray poupon"], // it will be converted to grey at end
   ["emerals", "emerald"],
   ["hoovooloo", "hooloovoo"],
   ["palish", "paleish"],

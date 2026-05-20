@@ -5,47 +5,15 @@ import { convert, deltaEOK2 } from "./util/gaussian.js";
 import { isFlagged } from "./survey/constants-curate.js";
 import { TOKEN_ALLOW } from "./survey/constants.js";
 
-const src = await readFile("data/xkcd/answers.compact.json", "utf8");
+const src = await readFile("data/xkcd/answers.clean.json", "utf8");
 const json = JSON.parse(src);
 
 const data = loadDataFromJSON(json);
+
+const swaps = new Map();
 console.log("Total Records:", data.length);
 
-// const nameMap = getNameMap(data);
-// const userMap = getUserMap(data);
-// const sorted = Array.from(nameMap.entries()).sort(
-//   (a, b) => b[1].length - a[1].length,
-// );
-
-// const list = [];
-// for (let s of sorted.slice(0, 10000)) {
-//   const name = s[0];
-
-//   const userIDs = s[1].map((i) => data[i].user);
-//   const colorCount = s[1].length;
-//   const uniqueUserCount = new Set(userIDs).size;
-//   const ratio = uniqueUserCount / colorCount;
-//   if (uniqueUserCount <= 1) {
-//     console.log(
-//       `${name} (${uniqueUserCount} users of ${colorCount} colors) (${Math.floor(
-//         100 * ratio,
-//       )}%)`,
-//     );
-//     list.push(name);
-//   }
-
-//   // if (uniqueUserCount <= 3 || ratio <= 0.25) {
-//   // console.log(
-//   //   `${name} (${uniqueUserCount} users of ${colorCount} colors) (${Math.floor(
-//   //     100 * ratio,
-//   //   )}%)`,
-//   // );
-//   // }
-// }
-
-// console.log(JSON.stringify(list, null, 2));
-
-const colors = convert(data, {
+let colors = convert(data, {
   debug: true,
   filter: "mad",
   minUsers: 4,
@@ -53,18 +21,9 @@ const colors = convert(data, {
   maxCount: 15000,
 });
 
-// console.log("FLAGGED---->");
-// const flags = new Set();
-// for (let a of colors) {
-//   if (isFlagged(a.name)) {
-//     console.log(a.name);
-//     flags.add(a.name);
-//   }
-// }
+colors = colors.slice(10000);
 
-// console.log();
-// console.log(flags.size);
-// console.log(JSON.stringify([...flags]));
+console.log("Converted:", colors.length);
 
 const maxLenDigits = String(colors.length).length;
 console.log(colors.length);
@@ -78,10 +37,6 @@ for (let i = 0; i < colors.length; i++) {
     cov, // covariance matrix
     filteredColors, // list of { oklab } colors
   } = colors[i];
-
-  // const show =
-  //   TOKEN_ALLOW.has(name) || name.split(" ").some((t) => TOKEN_ALLOW.has(t));
-  // if (!show) continue;
   console.log(
     `${String(i).padStart(maxLenDigits, "0")}: ${name} (votes:${votes} userVotes:${userVotes})`,
   );

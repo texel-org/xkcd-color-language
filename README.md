@@ -36,7 +36,7 @@ You can include `--skip-color-blind` or `--skip-non-english` options to skip col
 
 You can include `--debug` to see what top-voted terms were culled during this cleanup phase.
 
-This will render `data/xkcd/answers.compact.json` which is an array of 3 or 4 element arrays:
+This will render `data/xkcd/answers.clean.json` which is an array of 3 or 4 element arrays:
 
 ```json
 [ userId, rgbInt, name, originalName ]

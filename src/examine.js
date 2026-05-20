@@ -11,7 +11,7 @@ import { createReadStream, writeFileSync } from "node:fs";
 import csv from "csv-parser";
 // import { TOKEN_ALLOW } from "./survey/constants.js";
 
-const src = await readFile("data/xkcd/answers.compact.json", "utf8");
+const src = await readFile("data/xkcd/answers.clean.json", "utf8");
 const rows = JSON.parse(src);
 const data = loadDataFromJSON(rows);
 console.log("Total Records:", data.length);
